@@ -1,0 +1,7 @@
+mobilenet nocom exit 124
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 25:03.83
+	Maximum resident set size (kbytes): 69605988
+mobilenet poly exit 137
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 21:10.26
+	Maximum resident set size (kbytes): 133947940
+DONE

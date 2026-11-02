@@ -1,0 +1,2 @@
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+ipa,1,22,4194304,setup,700.118903,0.468824,3.008225,78.930960,0.071687,81.939185,1715660,1568

@@ -1,0 +1,25 @@
+scheme  k        n  commit_s    open_s  verify_s     setup_s  peak_gib  passes  commit_open_s
+   ipa 16    65536  0.071427  1.363752  0.003120    8.212985  0.030064       2       1.435178
+   ipa 18   262144  0.238954  5.254945  0.007221   36.169629  0.120377       2       5.493899
+   ipa 20  1048576  0.826998 20.111824  0.016751  158.777099  0.440414       2      20.938822
+   ipa 22  4194304  3.008225 78.930960  0.071687  700.118903  1.636181       1      81.939185
+   kzg 16    65536  0.084534  0.183919  0.000081    5.902525  0.037750       2       0.268454
+   kzg 18   262144  0.282842  0.609423  0.000089   22.908437  0.138153       2       0.892266
+   kzg 20  1048576  1.000214  2.246855  0.000095   91.649900  0.533707       2       3.247069
+   kzg 22  4194304  3.588408  8.237160  0.000107  366.657003  2.127472       2      11.825568
+   kzg 24 16777216 13.372848 30.986104  0.000110 1513.978490  8.502739       2      44.358953
+scheme        metric  loglog_slope  points
+   ipa      commit_s      0.899004       4
+   ipa        open_s      0.975056       4
+   ipa commit_open_s      0.971802       4
+   ipa      peak_gib      0.958491       4
+   kzg      commit_s      0.913819       5
+   kzg        open_s      0.927472       5
+   kzg commit_open_s      0.923256       5
+   kzg      peak_gib      0.978770       5
+              model            params                                    config       status  prover_s  peak_rss_gib                                                                       note
+              mnist              8.1K                             no commitment           ok     4.799           NaN                                                                 single run
+              mnist              8.1K artemis-style (poly_com=true poly_cols=3)           ok     6.178           NaN single run; 5.445 s halo2 proof + 0.326 + 0.406 s external weight openings
+              mnist              8.1K                       lunar-style cp_link           ok    37.959           NaN                                                                 single run
+mobilenet-truncated 1.58MB model file                             no commitment           ok  2879.500         155.2                                                      k=23 cols=20; 16 vCPU
+mobilenet-truncated 1.58MB model file artemis-style (poly_com=true poly_cols=1) not finished       NaN         160.9            killed at 55 min wall (about 47 min into proving); not finished

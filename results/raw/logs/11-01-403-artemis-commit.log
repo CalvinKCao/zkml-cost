@@ -1,0 +1,3291 @@
+job 7131403 node kn084 cpus 16 Sun Nov  1 11:39:24 PM EST 2026
+GPU 0: NVIDIA L40S (UUID: GPU-4d6ce3ae-6b9d-9b6e-cd78-65c47055f857)
+Sun Nov  1 23:39:25 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    Off |   00000000:E3:00.0 Off |                    0 |
+| N/A   26C    P8             33W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 57 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  64
+On-line CPU(s) list:                     0-63
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz
+CPU family:                              6
+Model:                                   106
+Thread(s) per core:                      1
+Core(s) per socket:                      32
+Socket(s):                               2
+Stepping:                                6
+CPU(s) scaling MHz:                      42%
+CPU max MHz:                             3200.0000
+CPU min MHz:                             800.0000
+BogoMIPS:                                4000.00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities
+L1d cache:                               3 MiB (64 instances)
+L1i cache:                               2 MiB (64 instances)
+L2 cache:                                80 MiB (64 instances)
+L3 cache:                                96 MiB (2 instances)
+NUMA node(s):                            4
+NUMA node0 CPU(s):                       0-15
+=== toolchain (README: rustup override set nightly) ===
+info: override toolchain for /scratch/USER/artemis set to nightly-x86_64-unknown-linux-gnu
+Default host: x86_64-unknown-linux-gnu
+rustup home:  /scratch/USER/artemis-toolchain/rustup
+
+installed toolchains
+--------------------
+nightly-x86_64-unknown-linux-gnu (active)
+nightly-2024-05-09-x86_64-unknown-linux-gnu (default)
+
+active toolchain
+----------------
+name: nightly-x86_64-unknown-linux-gnu
+active because: directory override for '/scratch/USER/artemis'
+installed targets:
+  x86_64-unknown-linux-gnu
+rustc 1.101.0-nightly (3e92e1a2d 2026-11-01)
+=== cargo build --release ===
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded ciborium-io v0.2.2
+  Downloaded cfg-if v1.0.5
+  Downloaded cast v0.3.0
+  Downloaded adler2 v2.0.1
+  Downloaded pkg-config v0.3.34
+  Downloaded ciborium-ll v0.2.2
+  Downloaded clap_lex v1.1.1
+  Downloaded color_quant v1.1.0
+  Downloaded itoa v1.0.18
+  Downloaded lazy_static v1.5.1
+  Downloaded crunchy v0.2.4
+  Downloaded darling_macro v0.10.2
+  Downloaded dlib v0.5.3
+  Downloaded dot-generator v0.2.0
+  Downloaded errno v0.3.14
+  Downloaded dot-structures v0.1.2
+  Downloaded float-ord v0.3.2
+  Downloaded fnv v1.0.7
+  Downloaded funty v2.0.0
+  Downloaded paste v1.0.15
+  Downloaded block-buffer v0.9.0
+  Downloaded digest v0.9.0
+  Downloaded dirs-sys v0.5.0
+  Downloaded into-attr-derive v0.2.1
+  Downloaded block-buffer v0.10.4
+  Downloaded block-padding v0.2.1
+  Downloaded opaque-debug v0.3.1
+  Downloaded option-ext v0.2.0
+  Downloaded byteorder v1.5.0
+  Downloaded anes v0.1.6
+  Downloaded ark-std v0.3.0
+  Downloaded constant_time_eq v0.4.2
+  Downloaded anstyle v1.0.14
+  Downloaded autocfg v1.5.1
+  Downloaded bitflags v1.3.2
+  Downloaded crossbeam-deque v0.8.8
+  Downloaded graphviz-rust v0.9.9
+  Downloaded hex v0.4.3
+  Downloaded either v1.19.0
+  Downloaded num-complex v0.4.6
+  Downloaded fastrand v2.5.0
+  Downloaded fdeflate v0.3.7
+  Downloaded ff v0.13.1
+  Downloaded find-msvc-tools v0.1.15
+  Downloaded pest_generator v2.9.5
+  Downloaded pathfinder_simd v0.5.6
+  Downloaded oorandom v11.1.5
+  Downloaded pathfinder_geometry v0.5.1
+  Downloaded ciborium v0.2.2
+  Downloaded pest_stack_guard v1.0.0
+  Downloaded riff v1.0.1
+  Downloaded colored v2.2.0
+  Downloaded ident_case v1.0.1
+  Downloaded generic-array v0.14.7
+  Downloaded keccak v0.1.6
+  Downloaded dirs v6.0.0
+  Downloaded subtle v2.6.1
+  Downloaded tap v1.0.1
+  Downloaded is-terminal v0.4.17
+  Downloaded into-attr v0.1.1
+  Downloaded arrayvec v0.7.8
+  Downloaded crypto-common v0.1.7
+  Downloaded once_cell v1.21.4
+  Downloaded crossbeam-epoch v0.9.21
+  Downloaded plotters-svg v0.3.7
+  Downloaded version_check v0.9.5
+  Downloaded blake2b_simd v1.0.5
+  Downloaded csv-core v0.1.13
+  Downloaded pin-project-lite v0.2.17
+  Downloaded darling v0.10.2
+  Downloaded derive_builder_core v0.9.0
+  Downloaded getrandom v0.2.17
+  Downloaded group v0.13.0
+  Downloaded libloading v0.8.9
+  Downloaded digest v0.10.7
+  Downloaded log v0.4.35
+  Downloaded matrixmultiply v0.3.11
+  Downloaded same-file v1.0.6
+  Downloaded plotters-backend v0.3.7
+  Downloaded bytemuck v1.25.2
+  Downloaded crc32fast v1.5.4
+  Downloaded clap v4.6.7
+  Downloaded num-integer v0.1.47
+  Downloaded plotters-bitmap v0.3.7
+  Downloaded iana-time-zone v0.1.65
+  Downloaded radium v0.7.0
+  Downloaded rand_chacha v0.3.1
+  Downloaded anyhow v1.0.104
+  Downloaded criterion-plot v0.5.0
+  Downloaded darling_core v0.10.2
+  Downloaded rawpointer v0.2.1
+  Downloaded rand_core v0.6.4
+  Downloaded strsim v0.9.3
+  Downloaded pest_derive v2.9.5
+  Downloaded stacker v0.1.25
+  Downloaded font-kit v0.14.3
+  Downloaded simd-adler32 v0.3.10
+  Downloaded bitflags v2.13.2
+  Downloaded getrandom v0.4.3
+  Downloaded num-traits v0.2.19
+  Downloaded half v2.7.1
+  Downloaded yeslogic-fontconfig-sys v6.0.1
+  Downloaded rayon-core v1.13.0
+  Downloaded crossbeam-utils v0.8.23
+  Downloaded derive_builder v0.9.0
+  Downloaded walkdir v2.5.0
+  Downloaded miniz_oxide v0.9.1
+  Downloaded flate2 v1.1.10
+  Downloaded tinytemplate v1.2.1
+  Downloaded uint v0.9.5
+  Downloaded psm v0.1.24
+  Downloaded miniz_oxide v0.8.9
+  Downloaded ppv-lite86 v0.2.21
+  Downloaded quote v1.0.47
+  Downloaded rustc_version v0.4.1
+  Downloaded wyz v0.5.1
+  Downloaded zmij v1.0.23
+  Downloaded shlex v2.0.1
+  Downloaded memchr v2.8.3
+  Downloaded tempfile v3.27.0
+  Downloaded rmp v0.8.15
+  Downloaded tabbycat v0.1.2
+  Downloaded unicode-ident v1.0.27
+  Downloaded pest_meta v2.9.5
+  Downloaded weezl v0.1.12
+  Downloaded static_assertions v1.1.0
+  Downloaded spin v0.9.9
+  Downloaded num-bigint v0.4.8
+  Downloaded semver v1.0.28
+  Downloaded tracing-attributes v0.1.31
+  Downloaded ryu v1.0.23
+  Downloaded criterion v0.5.1
+  Downloaded itertools v0.10.5
+  Downloaded serde_core v1.0.229
+  Downloaded ucd-trie v0.1.7
+  Downloaded rmp-serde v1.3.1
+  Downloaded clap_builder v4.6.7
+  Downloaded cc v1.10.0
+  Downloaded aho-corasick v1.1.5
+  Downloaded proc-macro2 v1.0.107
+  Downloaded tracing-core v0.1.36
+  Downloaded serde_derive v1.0.229
+  Downloaded serde v1.0.229
+  Downloaded rand v0.8.8
+  Downloaded bitvec v1.1.1
+  Downloaded chrono v0.4.45
+  Downloaded typenum v1.20.1
+  Downloaded png v0.17.16
+  Downloaded ndarray v0.15.6
+  Downloaded regex v1.13.1
+  Downloaded pest v2.9.5
+  Downloaded plotters v0.3.7
+  Downloaded rayon v1.12.0
+  Downloaded serde_json v1.0.154
+  Downloaded ttf-parser v0.20.0
+  Downloaded zerocopy-derive v0.8.63
+  Downloaded pasta_curves v0.5.2
+  Downloaded zlib-rs v0.6.8
+  Downloaded syn v1.0.109
+  Downloaded syn v2.0.119
+  Downloaded syn v3.0.9
+  Downloaded regex-syntax v0.8.11
+  Downloaded zerocopy v0.8.63
+  Downloaded rustix v1.1.6
+  Downloaded tracing v0.1.44
+  Downloaded gif v0.12.0
+  Downloaded regex-automata v0.4.18
+  Downloaded sha3 v0.9.1
+  Downloaded wav v1.0.1
+  Downloaded jpeg-decoder v0.3.2
+  Downloaded libc v0.2.191
+  Downloaded csv v1.4.0
+  Downloaded linux-raw-sys v0.12.1
+  Downloaded freetype-sys v0.20.1
+  Downloaded image v0.24.9
+  Downloaded rounded-div v0.1.4
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling libc v0.2.191
+   Compiling cfg-if v1.0.5
+   Compiling find-msvc-tools v0.1.15
+   Compiling shlex v2.0.1
+   Compiling autocfg v1.5.1
+   Compiling zerocopy v0.8.63
+   Compiling memchr v2.8.3
+   Compiling version_check v0.9.5
+   Compiling syn v1.0.109
+   Compiling pkg-config v0.3.34
+   Compiling simd-adler32 v0.3.10
+   Compiling semver v1.0.28
+   Compiling crc32fast v1.5.4
+   Compiling typenum v1.20.1
+   Compiling cc v1.10.0
+   Compiling spin v0.9.9
+   Compiling once_cell v1.21.4
+   Compiling adler2 v2.0.1
+   Compiling generic-array v0.14.7
+   Compiling lazy_static v1.5.1
+   Compiling num-traits v0.2.19
+   Compiling rustc_version v0.4.1
+   Compiling crossbeam-utils v0.8.23
+   Compiling radium v0.7.0
+   Compiling miniz_oxide v0.9.1
+   Compiling yeslogic-fontconfig-sys v6.0.1
+   Compiling pathfinder_simd v0.5.6
+   Compiling bitflags v2.13.2
+   Compiling strsim v0.9.3
+   Compiling ident_case v1.0.1
+   Compiling byteorder v1.5.0
+   Compiling tap v1.0.1
+   Compiling crossbeam-epoch v0.9.21
+   Compiling fnv v1.0.7
+   Compiling wyz v0.5.1
+   Compiling miniz_oxide v0.8.9
+   Compiling fdeflate v0.3.7
+   Compiling flate2 v1.1.10
+   Compiling libloading v0.8.9
+   Compiling option-ext v0.2.0
+   Compiling crossbeam-deque v0.8.8
+   Compiling bitflags v1.3.2
+   Compiling color_quant v1.1.0
+   Compiling funty v2.0.0
+   Compiling dlib v0.5.3
+   Compiling syn v2.0.119
+   Compiling png v0.17.16
+   Compiling aho-corasick v1.1.5
+   Compiling weezl v0.1.12
+   Compiling bitvec v1.1.1
+   Compiling rayon-core v1.13.0
+   Compiling getrandom v0.2.17
+   Compiling dirs-sys v0.5.0
+   Compiling regex-syntax v0.8.11
+   Compiling rand_core v0.6.4
+   Compiling font-kit v0.14.3
+   Compiling bytemuck v1.25.2
+   Compiling psm v0.1.24
+   Compiling freetype-sys v0.20.1
+   Compiling stacker v0.1.25
+   Compiling same-file v1.0.6
+   Compiling pest_stack_guard v1.0.0
+   Compiling plotters-backend v0.3.7
+   Compiling subtle v2.6.1
+   Compiling jpeg-decoder v0.3.2
+   Compiling either v1.19.0
+   Compiling log v0.4.35
+   Compiling walkdir v2.5.0
+   Compiling pathfinder_geometry v0.5.1
+   Compiling dirs v6.0.0
+   Compiling gif v0.12.0
+   Compiling num-integer v0.1.47
+   Compiling syn v3.0.9
+   Compiling paste v1.0.15
+   Compiling derive_builder v0.9.0
+   Compiling constant_time_eq v0.4.2
+   Compiling static_assertions v1.1.0
+   Compiling serde_core v1.0.229
+   Compiling arrayvec v0.7.8
+   Compiling anyhow v1.0.104
+   Compiling image v0.24.9
+   Compiling float-ord v0.3.2
+   Compiling iana-time-zone v0.1.65
+   Compiling blake2b_simd v1.0.5
+   Compiling chrono v0.4.45
+   Compiling plotters-svg v0.3.7
+   Compiling regex-automata v0.4.18
+   Compiling itertools v0.10.5
+   Compiling darling_core v0.10.2
+   Compiling ff v0.13.1
+   Compiling group v0.13.0
+   Compiling block-buffer v0.10.4
+   Compiling plotters-bitmap v0.3.7
+   Compiling crypto-common v0.1.7
+   Compiling halo2curves v0.3.3 (/scratch/USER/artemis/halo2/halo2curves)
+   Compiling block-padding v0.2.1
+   Compiling ttf-parser v0.20.0
+   Compiling block-buffer v0.9.0
+   Compiling digest v0.10.7
+   Compiling rayon v1.12.0
+   Compiling digest v0.9.0
+   Compiling tracing-core v0.1.36
+   Compiling colored v2.2.0
+   Compiling zerocopy-derive v0.8.63
+   Compiling tracing-attributes v0.1.31
+   Compiling darling_macro v0.10.2
+   Compiling pin-project-lite v0.2.17
+   Compiling regex v1.13.1
+   Compiling keccak v0.1.6
+   Compiling darling v0.10.2
+   Compiling derive_builder_core v0.9.0
+   Compiling opaque-debug v0.3.1
+   Compiling sha3 v0.9.1
+   Compiling serde v1.0.229
+   Compiling serde_derive v1.0.229
+   Compiling ucd-trie v0.1.7
+   Compiling tracing v0.1.44
+   Compiling zmij v1.0.23
+   Compiling plotters v0.3.7
+   Compiling pest v2.9.5
+   Compiling crunchy v0.2.4
+   Compiling tabbycat v0.1.2
+   Compiling getrandom v0.4.3
+   Compiling rustix v1.1.6
+   Compiling itoa v1.0.18
+   Compiling serde_json v1.0.154
+   Compiling dot-structures v0.1.2
+   Compiling matrixmultiply v0.3.11
+   Compiling ciborium-io v0.2.2
+   Compiling anstyle v1.0.14
+   Compiling clap_lex v1.1.1
+   Compiling linux-raw-sys v0.12.1
+   Compiling clap_builder v4.6.7
+   Compiling into-attr v0.1.1
+   Compiling dot-generator v0.2.0
+   Compiling rawpointer v0.2.1
+   Compiling cast v0.3.0
+   Compiling pest_meta v2.9.5
+   Compiling fastrand v2.5.0
+   Compiling hex v0.4.3
+   Compiling criterion-plot v0.5.0
+   Compiling uint v0.9.5
+   Compiling into-attr-derive v0.2.1
+   Compiling pest_generator v2.9.5
+   Compiling is-terminal v0.4.17
+   Compiling num-complex v0.4.6
+   Compiling rmp v0.8.15
+   Compiling csv-core v0.1.13
+   Compiling riff v1.0.1
+   Compiling clap v4.6.7
+   Compiling tempfile v3.27.0
+   Compiling tinytemplate v1.2.1
+   Compiling pest_derive v2.9.5
+   Compiling oorandom v11.1.5
+   Compiling anes v0.1.6
+   Compiling ryu v1.0.23
+   Compiling rmp-serde v1.3.1
+   Compiling ndarray v0.15.6
+   Compiling wav v1.0.1
+   Compiling csv v1.4.0
+   Compiling rounded-div v0.1.4
+   Compiling graphviz-rust v0.9.9
+   Compiling ppv-lite86 v0.2.21
+   Compiling half v2.7.1
+   Compiling rand_chacha v0.3.1
+   Compiling ciborium-ll v0.2.2
+   Compiling rand v0.8.8
+   Compiling ciborium v0.2.2
+   Compiling criterion v0.5.1
+   Compiling pasta_curves v0.5.2
+   Compiling num-bigint v0.4.8
+   Compiling ark-std v0.3.0
+warning: unexpected `cfg` condition value: `alloc`
+  --> halo2/halo2curves/src/bls12381/mod.rs:26:7
+   |
+26 | #[cfg(feature = "alloc")]
+   |       ^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `alloc` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: `#[warn(unexpected_cfgs)]` on by default
+
+warning: unexpected `cfg` condition value: `zeroize`
+   --> halo2/halo2curves/src/bls12381/scalar.rs:315:7
+    |
+315 | #[cfg(feature = "zeroize")]
+    |       ^^^^^^^^^^^^^^^^^^^
+    |
+    = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+    = help: consider adding `zeroize` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `std`
+   --> halo2/halo2curves/src/bls12381/scalar.rs:946:7
+    |
+946 | #[cfg(feature = "std")]
+    |       ^^^^^^^^^^^^^^^
+    |
+    = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+    = help: consider adding `std` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+    --> halo2/halo2curves/src/bls12381/scalar.rs:1391:7
+     |
+1391 | #[cfg(feature = "zeroize")]
+     |       ^^^^^^^^^^^^^^^^^^^
+     |
+     = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+     = help: consider adding `zeroize` as a feature in `Cargo.toml`
+     = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+  --> halo2/halo2curves/src/bls12381/fp.rs:38:7
+   |
+38 | #[cfg(feature = "zeroize")]
+   |       ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `zeroize` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+    --> halo2/halo2curves/src/bls12381/fp.rs:1456:7
+     |
+1456 | #[cfg(feature = "zeroize")]
+     |       ^^^^^^^^^^^^^^^^^^^
+     |
+     = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+     = help: consider adding `zeroize` as a feature in `Cargo.toml`
+     = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unused import: `digest::typenum::Zero`
+ --> halo2/halo2curves/src/bls12381/fp.rs:6:5
+  |
+6 | use digest::typenum::Zero;
+  |     ^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `crate::field_common`
+  --> halo2/halo2curves/src/bls12381/fp.rs:12:5
+   |
+12 | use crate::field_common;
+   |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `rand_core::OsRng`
+    --> halo2/halo2curves/src/bls12381/fp.rs:1379:5
+     |
+1379 | use rand_core::OsRng;
+     |     ^^^^^^^^^^^^^^^^
+
+warning: unexpected `cfg` condition value: `zeroize`
+  --> halo2/halo2curves/src/bls12381/fp2.rs:51:7
+   |
+51 | #[cfg(feature = "zeroize")]
+   |       ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `zeroize` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+    --> halo2/halo2curves/src/bls12381/fp2.rs:1171:7
+     |
+1171 | #[cfg(feature = "zeroize")]
+     |       ^^^^^^^^^^^^^^^^^^^
+     |
+     = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+     = help: consider adding `zeroize` as a feature in `Cargo.toml`
+     = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unused import: `super::fp::FpRepr`
+  --> halo2/halo2curves/src/bls12381/fp2.rs:14:5
+   |
+14 | use super::fp::FpRepr;
+   |     ^^^^^^^^^^^^^^^^^
+
+warning: unexpected `cfg` condition value: `experimental`
+   --> halo2/halo2curves/src/bls12381/fp2.rs:622:21
+    |
+622 |     #[cfg(all(test, feature = "experimental"))]
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+    = help: consider adding `experimental` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `alloc`
+  --> halo2/halo2curves/src/bls12381/g1.rs:16:7
+   |
+16 | #[cfg(feature = "alloc")]
+   |       ^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `alloc` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+  --> halo2/halo2curves/src/bls12381/g1.rs:92:7
+   |
+92 | #[cfg(feature = "zeroize")]
+   |       ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `zeroize` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+   --> halo2/halo2curves/src/bls12381/g1.rs:581:7
+    |
+581 | #[cfg(feature = "zeroize")]
+    |       ^^^^^^^^^^^^^^^^^^^
+    |
+    = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+    = help: consider adding `zeroize` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+    --> halo2/halo2curves/src/bls12381/g1.rs:1018:7
+     |
+1018 | #[cfg(feature = "zeroize")]
+     |       ^^^^^^^^^^^^^^^^^^^
+     |
+     = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+     = help: consider adding `zeroize` as a feature in `Cargo.toml`
+     = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+    --> halo2/halo2curves/src/bls12381/g1.rs:1062:7
+     |
+1062 | #[cfg(feature = "zeroize")]
+     |       ^^^^^^^^^^^^^^^^^^^
+     |
+     = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+     = help: consider adding `zeroize` as a feature in `Cargo.toml`
+     = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `alloc`
+    --> halo2/halo2curves/src/bls12381/g1.rs:1134:7
+     |
+1134 | #[cfg(feature = "alloc")]
+     |       ^^^^^^^^^^^^^^^^^
+     |
+     = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+     = help: consider adding `alloc` as a feature in `Cargo.toml`
+     = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+    --> halo2/halo2curves/src/bls12381/g1.rs:1933:7
+     |
+1933 | #[cfg(feature = "zeroize")]
+     |       ^^^^^^^^^^^^^^^^^^^
+     |
+     = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+     = help: consider adding `zeroize` as a feature in `Cargo.toml`
+     = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unused import: `pasta_curves::Fq`
+  --> halo2/halo2curves/src/bls12381/g1.rs:12:5
+   |
+12 | use pasta_curves::Fq;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: unused imports: `batch_add`, `new_curve_impl`, and `serde`
+  --> halo2/halo2curves/src/bls12381/g1.rs:21:13
+   |
+21 | use crate::{batch_add, new_curve_impl, serde, CurveAffineExt};
+   |             ^^^^^^^^^  ^^^^^^^^^^^^^^  ^^^^^
+
+warning: unexpected `cfg` condition value: `alloc`
+  --> halo2/halo2curves/src/bls12381/g2.rs:15:7
+   |
+15 | #[cfg(feature = "alloc")]
+   |       ^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `alloc` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+  --> halo2/halo2curves/src/bls12381/g2.rs:79:7
+   |
+79 | #[cfg(feature = "zeroize")]
+   |       ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `zeroize` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+   --> halo2/halo2curves/src/bls12381/g2.rs:576:7
+    |
+576 | #[cfg(feature = "zeroize")]
+    |       ^^^^^^^^^^^^^^^^^^^
+    |
+    = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+    = help: consider adding `zeroize` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+    --> halo2/halo2curves/src/bls12381/g2.rs:1162:7
+     |
+1162 | #[cfg(feature = "zeroize")]
+     |       ^^^^^^^^^^^^^^^^^^^
+     |
+     = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+     = help: consider adding `zeroize` as a feature in `Cargo.toml`
+     = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+    --> halo2/halo2curves/src/bls12381/g2.rs:1206:7
+     |
+1206 | #[cfg(feature = "zeroize")]
+     |       ^^^^^^^^^^^^^^^^^^^
+     |
+     = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+     = help: consider adding `zeroize` as a feature in `Cargo.toml`
+     = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `alloc`
+    --> halo2/halo2curves/src/bls12381/g2.rs:1278:7
+     |
+1278 | #[cfg(feature = "alloc")]
+     |       ^^^^^^^^^^^^^^^^^
+     |
+     = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+     = help: consider adding `alloc` as a feature in `Cargo.toml`
+     = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+    --> halo2/halo2curves/src/bls12381/g2.rs:2277:7
+     |
+2277 | #[cfg(feature = "zeroize")]
+     |       ^^^^^^^^^^^^^^^^^^^
+     |
+     = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+     = help: consider adding `zeroize` as a feature in `Cargo.toml`
+     = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `pairings`
+  --> halo2/halo2curves/src/bls12381/fp12.rs:10:7
+   |
+10 | #[cfg(feature = "pairings")]
+   |       ^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `pairings` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+  --> halo2/halo2curves/src/bls12381/fp12.rs:66:7
+   |
+66 | #[cfg(feature = "zeroize")]
+   |       ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `zeroize` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+   --> halo2/halo2curves/src/bls12381/fp12.rs:651:7
+    |
+651 | #[cfg(feature = "zeroize")]
+    |       ^^^^^^^^^^^^^^^^^^^
+    |
+    = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+    = help: consider adding `zeroize` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `pairings`
+ --> halo2/halo2curves/src/bls12381/fp6.rs:9:7
+  |
+9 | #[cfg(feature = "pairings")]
+  |       ^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+  = help: consider adding `pairings` as a feature in `Cargo.toml`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+  --> halo2/halo2curves/src/bls12381/fp6.rs:59:7
+   |
+59 | #[cfg(feature = "zeroize")]
+   |       ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `zeroize` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+   --> halo2/halo2curves/src/bls12381/fp6.rs:563:7
+    |
+563 | #[cfg(feature = "zeroize")]
+    |       ^^^^^^^^^^^^^^^^^^^
+    |
+    = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+    = help: consider adding `zeroize` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+  --> halo2/halo2curves/src/bls12381/pairings.rs:32:7
+   |
+32 | #[cfg(feature = "zeroize")]
+   |       ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `zeroize` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+   --> halo2/halo2curves/src/bls12381/pairings.rs:217:7
+    |
+217 | #[cfg(feature = "zeroize")]
+    |       ^^^^^^^^^^^^^^^^^^^
+    |
+    = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+    = help: consider adding `zeroize` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `zeroize`
+   --> halo2/halo2curves/src/bls12381/pairings.rs:928:7
+    |
+928 | #[cfg(feature = "zeroize")]
+    |       ^^^^^^^^^^^^^^^^^^^
+    |
+    = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+    = help: consider adding `zeroize` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unused import: `digest::generic_array`
+  --> halo2/halo2curves/src/bls12381/mod.rs:74:16
+   |
+74 | pub(crate) use digest::generic_array;
+   |                ^^^^^^^^^^^^^^^^^^^^^
+
+warning: unexpected `cfg` condition value: `alloc`
+  --> halo2/halo2curves/src/bls12381/hash_to_curve/expand_msg.rs:16:7
+   |
+16 | #[cfg(feature = "alloc")]
+   |       ^^^^^^^^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+   = help: consider adding `alloc` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition value: `alloc`
+   --> halo2/halo2curves/src/bls12381/hash_to_curve/expand_msg.rs:146:11
+    |
+146 |     #[cfg(feature = "alloc")]
+    |           ^^^^^^^^^^^^^^^^^
+    |
+    = note: expected values for `feature` are: `asm`, `bits`, `default`, `derive_serde`, `prefetch`, `print-trace`, `reexport`, and `serde`
+    = help: consider adding `alloc` as a feature in `Cargo.toml`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: the `#![no_std]` attribute can only be used at the crate root
+  --> halo2/halo2curves/src/bls12381/mod.rs:11:1
+   |
+11 | #![no_std]
+   | ^^^^^^^^^^
+   |
+   = help: the crate root is at `halo2/halo2curves/src/lib.rs`
+   = note: `#[warn(unused_attributes)]` (part of `#[warn(unused)]`) on by default
+
+warning: the `must_use` attribute cannot be used on trait methods in impl blocks
+   --> halo2/halo2curves/src/bn256/engine.rs:199:7
+    |
+199 |     #[must_use]
+    |       ^^^^^^^^
+200 |     fn double(&self) -> Self {
+    |
+    = help: the `must_use` attribute can be applied to data types, foreign functions, functions, inherent methods, provided trait methods, required trait methods, and traits
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+
+warning: the `must_use` attribute cannot be used on trait methods in impl blocks
+   --> halo2/halo2curves/src/bls12381/scalar.rs:744:7
+    |
+744 |     #[must_use]
+    |       ^^^^^^^^
+745 |     fn square(&self) -> Self {
+    |
+    = help: the `must_use` attribute can be applied to data types, foreign functions, functions, inherent methods, provided trait methods, required trait methods, and traits
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+
+warning: the `must_use` attribute cannot be used on trait methods in impl blocks
+   --> halo2/halo2curves/src/bls12381/scalar.rs:749:7
+    |
+749 |     #[must_use]
+    |       ^^^^^^^^
+750 |     fn double(&self) -> Self {
+    |
+    = help: the `must_use` attribute can be applied to data types, foreign functions, functions, inherent methods, provided trait methods, required trait methods, and traits
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+
+warning: the `must_use` attribute cannot be used on trait methods in impl blocks
+   --> halo2/halo2curves/src/bls12381/fp.rs:187:7
+    |
+187 |     #[must_use]
+    |       ^^^^^^^^
+188 |     fn square(&self) -> Self {
+    |
+    = help: the `must_use` attribute can be applied to data types, foreign functions, functions, inherent methods, provided trait methods, required trait methods, and traits
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+
+warning: the `must_use` attribute cannot be used on trait methods in impl blocks
+   --> halo2/halo2curves/src/bls12381/fp.rs:192:7
+    |
+192 |     #[must_use]
+    |       ^^^^^^^^
+193 |     fn double(&self) -> Self {
+    |
+    = help: the `must_use` attribute can be applied to data types, foreign functions, functions, inherent methods, provided trait methods, required trait methods, and traits
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+
+warning: the `must_use` attribute cannot be used on trait methods in impl blocks
+    --> halo2/halo2curves/src/bls12381/g1.rs:1128:7
+     |
+1128 |     #[must_use]
+     |       ^^^^^^^^
+1129 |     fn double(&self) -> Self {
+     |
+     = help: the `must_use` attribute can be applied to data types, foreign functions, functions, inherent methods, provided trait methods, required trait methods, and traits
+     = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+
+warning: the `must_use` attribute cannot be used on trait methods in impl blocks
+    --> halo2/halo2curves/src/bls12381/g2.rs:1272:7
+     |
+1272 |     #[must_use]
+     |       ^^^^^^^^
+1273 |     fn double(&self) -> Self {
+     |
+     = help: the `must_use` attribute can be applied to data types, foreign functions, functions, inherent methods, provided trait methods, required trait methods, and traits
+     = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+
+warning: the `must_use` attribute cannot be used on trait methods in impl blocks
+   --> halo2/halo2curves/src/bls12381/pairings.rs:479:7
+    |
+479 |     #[must_use]
+    |       ^^^^^^^^
+480 |     fn double(&self) -> Self {
+    |
+    = help: the `must_use` attribute can be applied to data types, foreign functions, functions, inherent methods, provided trait methods, required trait methods, and traits
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+
+warning: unused import: `CurveAffineExt`
+  --> halo2/halo2curves/src/bls12381/g1.rs:21:47
+   |
+21 | use crate::{batch_add, new_curve_impl, serde, CurveAffineExt};
+   |                                               ^^^^^^^^^^^^^^
+
+warning: function cannot return without recursing
+   --> halo2/halo2curves/src/bls12381/fp2.rs:244:5
+    |
+244 |     fn double(&self) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^ cannot return without recursing
+245 |         self.double()
+    |         ------------- recursive call site
+    |
+    = help: a `loop` may express intention better if this is on purpose
+    = note: `#[warn(unconditional_recursion)]` on by default
+
+warning: constant `T` is never used
+   --> halo2/halo2curves/src/bls12381/fp.rs:158:7
+    |
+158 | const T: Fp = Fp::from_raw([
+    |       ^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `T_MINUS_ONE_DIV_TWO` is never used
+   --> halo2/halo2curves/src/bls12381/fp.rs:168:7
+    |
+168 | const T_MINUS_ONE_DIV_TWO: Fp = Fp::from_raw([
+    |       ^^^^^^^^^^^^^^^^^^^
+
+warning: associated function `montgomery_reduce_new` is never used
+   --> halo2/halo2curves/src/bls12381/fp.rs:860:25
+    |
+412 | impl Fp {
+    | ------- associated function in this implementation
+...
+860 |     pub(crate) const fn montgomery_reduce_new(
+    |                         ^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `MODULUS` is never used
+   --> halo2/halo2curves/src/bls12381/fp2.rs:144:7
+    |
+144 | const MODULUS: [u64; 6] = [
+    |       ^^^^^^^
+
+   Compiling halo2_proofs v0.2.0 (/scratch/USER/artemis/halo2/halo2_proofs)
+warning: unnecessary parentheses around index expression
+   --> halo2/halo2_proofs/src/fft/parallel.rs:123:54
+    |
+123 |         t1[arithmetic::bitreverse(i, log_split)] = a[(i * sub_n + sub_fft_offset)];
+    |                                                      ^                          ^
+    |
+    = note: `#[warn(unused_parens)]` (part of `#[warn(unused)]`) on by default
+help: remove these parentheses
+    |
+123 -         t1[arithmetic::bitreverse(i, log_split)] = a[(i * sub_n + sub_fft_offset)];
+123 +         t1[arithmetic::bitreverse(i, log_split)] = a[i * sub_n + sub_fft_offset];
+    |
+
+warning: unused doc comment
+   --> halo2/halo2_proofs/src/dev/graph/layout.rs:367:13
+    |
+367 | /             /// Any cells assigned outside of a region. We store this as a `Vec` so that if any
+368 | |             /// cells are double-assigned, they will be visibly darker.
+    | |_______________________________________________________________________^
+369 |               loose_cells: vec![],
+    |               ------------------- rustdoc does not generate documentation for expression fields
+    |
+    = help: use `//` for a plain comment
+    = note: `#[warn(unused_doc_comments)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused doc comment
+   --> halo2/halo2_proofs/src/dev/graph/layout.rs:370:13
+    |
+370 |             /// Pairs of cells between which we have equality constraints.
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+371 |             equality: vec![],
+    |             ---------------- rustdoc does not generate documentation for expression fields
+    |
+    = help: use `//` for a plain comment
+
+warning: unused doc comment
+   --> halo2/halo2_proofs/src/dev/graph/layout.rs:372:13
+    |
+372 |             /// Selector assignments used for optimization pass
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+373 |             selectors: vec![vec![false; n]; num_selectors],
+    |             ---------------------------------------------- rustdoc does not generate documentation for expression fields
+    |
+    = help: use `//` for a plain comment
+
+warning: the `must_use` attribute cannot be used on trait methods in impl blocks
+   --> halo2/halo2_proofs/src/poly/ipa/strategy.rs:113:7
+    |
+113 |     #[must_use]
+    |       ^^^^^^^^
+114 |     fn finalize(self) -> bool {
+    |
+    = help: the `must_use` attribute can be applied to data types, foreign functions, functions, inherent methods, provided trait methods, required trait methods, and traits
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+    = note: `#[warn(unused_attributes)]` (part of `#[warn(unused)]`) on by default
+
+warning: the `must_use` attribute cannot be used on trait methods in impl blocks
+   --> halo2/halo2_proofs/src/poly/ipa/strategy.rs:154:7
+    |
+154 |     #[must_use]
+    |       ^^^^^^^^
+155 |     fn finalize(self) -> bool {
+    |
+    = help: the `must_use` attribute can be applied to data types, foreign functions, functions, inherent methods, provided trait methods, required trait methods, and traits
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+
+warning: `halo2curves` (lib) generated 56 warnings (run `cargo fix --lib -p halo2curves` to apply 15 suggestions)
+warning: unused variable: `timer`
+  --> halo2/halo2_proofs/src/plonk/verifier.rs:45:9
+   |
+45 |     let timer = Instant::now();
+   |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `timer`
+  --> halo2/halo2_proofs/src/plonk/verifier.rs:77:9
+   |
+77 |     let timer = Instant::now();
+   |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: unused variable: `timer`
+  --> halo2/halo2_proofs/src/plonk/verifier.rs:98:9
+   |
+98 |     let timer = Instant::now();
+   |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: unused variable: `timer`
+   --> halo2/halo2_proofs/src/plonk/verifier.rs:129:9
+    |
+129 |     let timer = Instant::now();
+    |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: unused variable: `timer`
+   --> halo2/halo2_proofs/src/plonk/verifier.rs:169:9
+    |
+169 |     let timer = Instant::now();
+    |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: unused variable: `timer`
+   --> halo2/halo2_proofs/src/plonk/verifier.rs:177:9
+    |
+177 |     let timer = Instant::now();
+    |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: unused variable: `timer`
+   --> halo2/halo2_proofs/src/plonk/verifier.rs:189:13
+    |
+189 |         let timer = Instant::now();
+    |             ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: unused variable: `timer`
+   --> halo2/halo2_proofs/src/plonk/verifier.rs:211:13
+    |
+211 |         let timer = Instant::now();
+    |             ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: unused variable: `timer`
+   --> halo2/halo2_proofs/src/plonk/verifier.rs:218:13
+    |
+218 |         let timer = Instant::now();
+    |             ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: unused variable: `timer`
+   --> halo2/halo2_proofs/src/plonk/verifier.rs:242:9
+    |
+242 |     let timer = Instant::now();
+    |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: unused variable: `timer`
+   --> halo2/halo2_proofs/src/plonk/verifier.rs:269:9
+    |
+269 |     let timer = Instant::now();
+    |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: unused variable: `timer`
+   --> halo2/halo2_proofs/src/plonk/verifier.rs:355:9
+    |
+355 |     let timer = Instant::now();
+    |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: unused variable: `timer`
+   --> halo2/halo2_proofs/src/plonk/verifier.rs:420:9
+    |
+420 |     let timer = Instant::now();
+    |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_timer`
+
+warning: variable does not need to be mutable
+   --> halo2/halo2_proofs/src/poly/domain.rs:272:37
+    |
+272 |     pub fn coeff_to_lagrange(&self, mut a: Polynomial<F, Coeff>) -> Polynomial<F, LagrangeCoeff> {
+    |                                     ----^
+    |                                     |
+    |                                     help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: variable does not need to be mutable
+   --> halo2/halo2_proofs/src/poly/domain.rs:291:37
+    |
+291 |     pub fn lagrange_to_coeff(&self, mut a: Polynomial<F, LagrangeCoeff>) -> Polynomial<F, Coeff> {
+    |                                     ----^
+    |                                     |
+    |                                     help: remove this `mut`
+
+warning: unused variable: `first`
+   --> halo2/halo2_proofs/src/poly/domain.rs:690:13
+    |
+690 |         let first = timer.elapsed();
+    |             ^^^^^ help: if this is intentional, prefix it with an underscore: `_first`
+
+warning: unused variable: `second`
+   --> halo2/halo2_proofs/src/poly/domain.rs:698:13
+    |
+698 |         let second = timer.elapsed();
+    |             ^^^^^^ help: if this is intentional, prefix it with an underscore: `_second`
+
+warning: struct `PointIndex` is never constructed
+    --> halo2/halo2_proofs/src/plonk/circuit.rs:1423:19
+     |
+1423 | pub(crate) struct PointIndex(pub usize);
+     |                   ^^^^^^^^^^
+     |
+     = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> halo2/halo2_proofs/src/plonk/vanishing/verifier.rs:123:9
+    |
+123 |         &self,
+    |         ^^^^^ the lifetime is elided here
+124 |         x: ChallengeX<C>,
+125 |     ) -> impl Iterator<Item = VerifierQuery<C, M>> + Clone {
+    |                               ^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+    = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+    |
+125 |     ) -> impl Iterator<Item = VerifierQuery<'_, C, M>> + Clone {
+    |                                             +++
+
+warning: hiding a lifetime that's named elsewhere is confusing
+  --> halo2/halo2_proofs/src/poly/ipa/commitment.rs:86:36
+   |
+86 |     fn empty_msm(&'params self) -> MSMIPA<C> {
+   |                   -------          ^^^^^^^^^ the same lifetime is hidden here
+   |                   |
+   |                   the lifetime is named here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: consistently use `'params`
+   |
+86 |     fn empty_msm(&'params self) -> MSMIPA<'params, C> {
+   |                                           ++++++++
+
+   Compiling maingate v0.1.0 (/scratch/USER/artemis/halo2/maingate)
+   Compiling halo2_gadgets v0.2.0 (/scratch/USER/artemis/halo2/halo2_gadgets)
+   Compiling halo2 v0.1.0-beta.2 (/scratch/USER/artemis/halo2/halo2)
+warning: trailing semicolon in macro used in expression position
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: macro invocations at the end of a block are treated as expressions
+    = note: to ignore the value produced by the macro, add a semicolon after the invocation of `uint_full_mul_reg`
+    = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+    = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+    = note: `#[warn(semicolon_in_expressions_from_non_local_macros)]` (part of `#[warn(future_incompatible)]`) on by default
+    = note: this warning originates in the macro `$crate::uint_full_mul_reg` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated constant `std::isize::MAX`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: `#[warn(deprecated)]` on by default
+    = note: this warning originates in the macro `$crate::uint_overflowing_binop` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated constant `std::isize::MAX`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::uint_overflowing_binop` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+   Compiling integer v0.1.0 (/scratch/USER/artemis/halo2/integer)
+warning: `halo2_proofs` (lib) generated 26 warnings (run `cargo fix --lib -p halo2_proofs` to apply 22 suggestions)
+warning: use of deprecated associated function `core::num::<impl u64>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::construct_uint` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl u32>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::construct_uint` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl usize>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::construct_uint` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl u8>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::impl_try_from_for_primitive` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl u16>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::impl_try_from_for_primitive` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl u32>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::impl_try_from_for_primitive` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl usize>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::impl_try_from_for_primitive` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl u64>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::impl_try_from_for_primitive` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl i8>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::impl_try_from_for_primitive` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl i16>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::impl_try_from_for_primitive` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl i32>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::impl_try_from_for_primitive` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl isize>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::impl_try_from_for_primitive` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl i64>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `$crate::impl_try_from_for_primitive` which comes from the expansion of the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated associated function `core::num::<impl i128>::max_value`: replaced by the `MAX` associated constant on this type
+   --> halo2/halo2_gadgets/src/ecc/chip/mul.rs:426:5
+    |
+426 | /     construct_uint! {
+427 | |         struct U256(4);
+428 | |     }
+    | |_____^
+    |
+    = note: this warning originates in the macro `construct_uint` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+   Compiling ecc v0.1.0 (/scratch/USER/artemis/halo2/ecc)
+   Compiling zkml v0.0.1 (/scratch/USER/artemis)
+warning: unused imports: `Expression` and `impl_add_binop_specify_output`
+ --> src/gadgets/poly.rs:5:33
+  |
+5 |   halo2curves::{ff::PrimeField, impl_add_binop_specify_output},
+  |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+6 |   plonk::{Advice, Column, ConstraintSystem, Error, Expression},
+  |                                                    ^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `rmp_serde::config`
+ --> src/gadgets/poly.rs:9:5
+  |
+9 | use rmp_serde::config;
+  |     ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `adder::AdderChip`
+  --> src/gadgets/poly.rs:11:22
+   |
+11 | use crate::gadgets::{adder::AdderChip, dot_prod::DotProductChip};
+   |                      ^^^^^^^^^^^^^^^^
+
+warning: unused import: `Instance`
+ --> src/gadgets/poly_2.rs:6:64
+  |
+6 |   plonk::{Advice, Column, ConstraintSystem, Error, Expression, Instance},
+  |                                                                ^^^^^^^^
+
+warning: unused import: `serde::de::value`
+ --> src/gadgets/poly_2.rs:9:5
+  |
+9 | use serde::de::value;
+  |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde_json::map::VacantEntry`
+  --> src/gadgets/poly_2.rs:10:5
+   |
+10 | use serde_json::map::VacantEntry;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Instance`
+ --> src/gadgets/poly_3.rs:6:64
+  |
+6 |   plonk::{Advice, Column, ConstraintSystem, Error, Expression, Instance},
+  |                                                                ^^^^^^^^
+
+warning: unused import: `serde_json::map::VacantEntry`
+ --> src/gadgets/poly_3.rs:9:5
+  |
+9 | use serde_json::map::VacantEntry;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `Assigned` and `Instance`
+ --> src/gadgets/poly_4.rs:6:19
+  |
+6 |   plonk::{Advice, Assigned, Column, ConstraintSystem, Error, Expression, Instance},
+  |                   ^^^^^^^^                                               ^^^^^^^^
+
+warning: unused import: `rmp_serde::config`
+ --> src/gadgets/poly_4.rs:9:5
+  |
+9 | use rmp_serde::config;
+  |     ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde_json::map::VacantEntry`
+  --> src/gadgets/poly_4.rs:10:5
+   |
+10 | use serde_json::map::VacantEntry;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::gadgets::nonlinear::sin`
+  --> src/gadgets/poly_4.rs:12:5
+   |
+12 | use crate::gadgets::nonlinear::sin;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `Assigned` and `Instance`
+ --> src/gadgets/poly_5.rs:6:19
+  |
+6 |   plonk::{Advice, Assigned, Column, ConstraintSystem, Error, Expression, Instance},
+  |                   ^^^^^^^^                                               ^^^^^^^^
+
+warning: unused import: `rmp_serde::config`
+ --> src/gadgets/poly_5.rs:9:5
+  |
+9 | use rmp_serde::config;
+  |     ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde_json::map::VacantEntry`
+  --> src/gadgets/poly_5.rs:10:5
+   |
+10 | use serde_json::map::VacantEntry;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `fs::File` and `io::BufWriter`
+ --> src/layers/dag.rs:1:33
+  |
+1 | use std::{collections::HashMap, fs::File, io::BufWriter, marker::PhantomData, rc::Rc};
+  |                                 ^^^^^^^^  ^^^^^^^^^^^^^
+
+warning: unused imports: `convert_to_u64` and `utils::helpers::print_assigned_arr`
+  --> src/layers/dag.rs:6:21
+   |
+ 6 |   gadgets::gadget::{convert_to_u64, GadgetConfig},
+   |                     ^^^^^^^^^^^^^^
+...
+33 |   utils::helpers::print_assigned_arr,
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `bitvec::index::BitIdx`
+ --> src/model.rs:7:5
+  |
+7 | use bitvec::index::BitIdx;
+  |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `AssignedPoint`, `AssignedValue`, `BaseFieldEccChip`, `MainGate`, `RegionCtx`, and `integer::rns::Rns`
+ --> src/model.rs:8:11
+  |
+8 | ...::{integer::rns::Rns, maingate::{AssignedValue, MainGate, MainGateConfig, RangeChip, RangeConfig, RangeInstructions, RegionCtx}, AssignedPoint, BaseFieldEccChip, E...
+  |       ^^^^^^^^^^^^^^^^^             ^^^^^^^^^^^^^  ^^^^^^^^                                                             ^^^^^^^^^   ^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^
+
+warning: unused imports: `Coeff`, `Phase`, `Polynomial`, `ThirdPhase`, `self`, and `self`
+  --> src/model.rs:10:13
+   |
+10 | ...::{self, AssignedCell, Layouter, SimpleFloorPlanner, Value},
+   |       ^^^^
+11 | ...rves::ff::{FromUniformBytes, PrimeField},
+12 | ...{Advice, Circuit, Column, ConstraintSystem, Error, FirstPhase, Instance, Phase, SecondPhase, ThirdPhase}, poly::{self, Coeff, Polynomial},
+   |                                                                             ^^^^^               ^^^^^^^^^^          ^^^^  ^^^^^  ^^^^^^^^^^
+
+warning: unused import: `num_traits::Zero`
+  --> src/model.rs:18:5
+   |
+18 | use num_traits::Zero;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `rand_core::OsRng`
+  --> src/model.rs:19:5
+   |
+19 | use rand_core::OsRng;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `rmp_serde::config`
+  --> src/model.rs:20:5
+   |
+20 | use rmp_serde::config;
+   |     ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `ecc::maingate::MainGateInstructions`
+  --> src/model.rs:22:5
+   |
+22 | use ecc::maingate::MainGateInstructions;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `Curve` and `Group`
+  --> src/model.rs:23:13
+   |
+23 | use group::{Curve, Group};
+   |             ^^^^^  ^^^^^
+
+warning: unused import: `poly_4::Poly4Chip`
+  --> src/model.rs:31:564
+   |
+31 | ..., poly::PolyChip, poly_2::Poly2Chip, poly_5::Poly5Chip, poly_4::Poly4Chip, sqrt_big::SqrtBigChip, square::SquareGadgetChip, squar...
+   |                                                            ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Params`
+ --> src/utils/barycentric.rs:6:29
+  |
+6 |         commitment::{Blind, Params, ParamsProver, Prover, Verifier},
+  |                             ^^^^^^
+
+warning: unused imports: `TranscriptRead` and `TranscriptWrite`
+  --> src/utils/barycentric.rs:17:5
+   |
+17 |     TranscriptRead, TranscriptReadBuffer, TranscriptWrite, TranscriptWriterBuffer
+   |     ^^^^^^^^^^^^^^                        ^^^^^^^^^^^^^^^
+
+warning: unused imports: `cofactor::CofactorCurveAffine` and `prime::PrimeCurveAffine as CurveAffine`
+  --> src/utils/barycentric.rs:20:20
+   |
+20 | use group::{Curve, prime::PrimeCurveAffine as CurveAffine, cofactor::CofactorCurveAffine};
+   |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `num_traits::pow`
+  --> src/utils/barycentric.rs:21:5
+   |
+21 | use num_traits::pow;
+   |     ^^^^^^^^^^^^^^^
+
+warning: unused import: `halo2_proofs::halo2curves::pasta::Fp`
+   --> src/utils/barycentric.rs:457:9
+    |
+457 |     use halo2_proofs::halo2curves::pasta::Fp;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `halo2_proofs::halo2curves::pasta::Fp`
+   --> src/utils/barycentric.rs:572:9
+    |
+572 |     use halo2_proofs::halo2curves::pasta::Fp;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `halo2_proofs::halo2curves::pasta::Fp`
+   --> src/utils/barycentric.rs:702:9
+    |
+702 |     use halo2_proofs::halo2curves::pasta::Fp;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `poly::ipa::commitment::ParamsIPA`
+  --> src/utils/bulletproof.rs:78:5
+   |
+78 |     poly::ipa::commitment::ParamsIPA,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `GroupEncoding`
+  --> src/utils/helpers.rs:10:20
+   |
+10 | use group::{Curve, GroupEncoding};
+   |                    ^^^^^^^^^^^^^
+
+warning: unused import: `ff::Field`
+   --> src/utils/helpers.rs:644:9
+    |
+644 |     use ff::Field;
+    |         ^^^^^^^^^
+
+warning: unused import: `Eq`
+   --> src/utils/helpers.rs:730:58
+    |
+730 |     use halo2_proofs::halo2curves::pasta::{Fp, EqAffine, Eq};
+    |                                                          ^^
+
+warning: unused import: `halo2_proofs::poly::commitment::Params`
+   --> src/utils/helpers.rs:731:9
+    |
+731 |     use halo2_proofs::poly::commitment::Params;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `group::Curve`
+   --> src/utils/helpers.rs:734:9
+    |
+734 |     use group::Curve;
+    |         ^^^^^^^^^^^^
+
+warning: unused import: `Eq`
+   --> src/utils/helpers.rs:915:58
+    |
+915 |     use halo2_proofs::halo2curves::pasta::{Fp, EqAffine, Eq};
+    |                                                          ^^
+
+warning: unused import: `halo2_proofs::poly::commitment::Params`
+   --> src/utils/helpers.rs:916:9
+    |
+916 |     use halo2_proofs::poly::commitment::Params;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `group::Curve`
+   --> src/utils/helpers.rs:919:9
+    |
+919 |     use group::Curve;
+    |         ^^^^^^^^^^^^
+
+warning: unused import: `core::num`
+ --> src/utils/proving_ipa.rs:1:5
+  |
+1 | use core::num;
+  |     ^^^^^^^^^
+
+warning: unused imports: `MSM`, `TranscriptWrite`, `Transcript`, `circuit`, and `self`
+  --> src/utils/proving_ipa.rs:12:32
+   |
+12 |   arithmetic::eval_polynomial, circuit, dev::MockProver, halo2curves::pasta::{EqAffine, Fp}, plonk::{create_proof, keygen_pk, keygen...
+   |                                ^^^^^^^
+13 |     commitment::{Blind, Params, ParamsProver, Prover, Verifier, MSM}, ipa::{
+   |                                                                 ^^^
+14 |       self, commitment::{IPACommitmentScheme, ParamsIPA}, msm::MSMIPA, multiopen::{ProverIPA, VerifierIPA}, strategy::SingleStrategy
+   |       ^^^^
+...
+17 |     Blake2bRead, Blake2bWrite, Challenge255, Transcript, TranscriptRead, TranscriptReadBuffer, TranscriptWrite, TranscriptWriterBuffer
+   |                                              ^^^^^^^^^^                                        ^^^^^^^^^^^^^^^
+
+warning: unused imports: `EpAffine`, `Eq`, and `bn256`
+  --> src/utils/proving_ipa.rs:20:19
+   |
+20 | use halo2curves::{bn256, pasta::{EpAffine, Eq}};
+   |                   ^^^^^          ^^^^^^^^  ^^
+
+warning: unused import: `rand::thread_rng`
+  --> src/utils/proving_ipa.rs:23:5
+   |
+23 | use rand::thread_rng;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `zkfft_commit_ipa`
+  --> src/utils/proving_ipa.rs:29:34
+   |
+29 |     helpers::{get_public_values, zkfft_commit_ipa, zkfft_verify_ipa, zkfft_commit_ipa_fft},
+   |                                  ^^^^^^^^^^^^^^^^
+
+warning: unused import: `core::num`
+ --> src/utils/proving_kzg.rs:1:5
+  |
+1 | use core::num;
+  |     ^^^^^^^^^
+
+warning: unused import: `self`
+ --> src/utils/proving_kzg.rs:3:66
+  |
+3 |   cmp::min, fmt::Debug, fs::File, io::{BufReader, Write}, path::{self, Path}, time::{Duration, Instant}
+  |                                                                  ^^^^
+
+warning: unused imports: `cplink1` and `verify1`
+ --> src/utils/proving_kzg.rs:5:29
+  |
+5 | use crate::utils::helpers::{cplink1, cplink1_lite, cplink2, powers, setup, vanishing_on_set, verify1, verify1_lite};
+  |                             ^^^^^^^                                                          ^^^^^^^
+
+warning: unused imports: `domain::Domain` and `order::verify`
+ --> src/utils/proving_kzg.rs:6:14
+  |
+6 | use bitvec::{domain::Domain, order::verify};
+  |              ^^^^^^^^^^^^^^  ^^^^^^^^^^^^^
+
+warning: unused imports: `AccumulatorStrategy`, `Error`, `TranscriptWrite`, `Transcript`, `circuit`, `eval_polynomial`, `kate_division`, `self`, and `self`
+  --> src/utils/proving_kzg.rs:10:16
+   |
+10 |   arithmetic::{eval_polynomial, kate_division}, circuit, dev::MockProver, helpers::SerdeCurveAffine, plonk::{create_proof, keygen_pk, keygen_vk, verify_proof, Error, VerifyingKey}, poly::{self, commitment::{Blind, Params, ParamsProver, Prover, Verifier}, kzg::{commitment::{KZGCommitmentScheme, ParamsKZG}, msm::DualMSM, multiopen::{ProverSHPLONK, VerifierSHPLONK}, strategy::{AccumulatorStrategy, S...
+   |                ^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^   ^^^^^^^                                                                                                        ^^^^^                        ^^^^                                                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^
+11 |     self, Blake2bRead, Blake2bWrite, Challenge255, EncodedChallenge, Transcript, TranscriptRead, TranscriptReadBuffer, TranscriptWrite, TranscriptWriterBuffer
+   |     ^^^^                                                             ^^^^^^^^^^                                        ^^^^^^^^^^^^^^^
+
+warning: unused imports: `bls12381::Bls12` and `bn256::pairing`
+  --> src/utils/proving_kzg.rs:14:19
+   |
+14 | use halo2curves::{bls12381::Bls12, bn256::pairing, group::Curve, pairing::{Engine, MultiMillerLoop}, serde::SerdeObject};
+   |                   ^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^
+
+warning: unused import: `rand::thread_rng`
+  --> src/utils/proving_kzg.rs:15:5
+   |
+15 | use rand::thread_rng;
+   |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `rmp_serde::config`
+  --> src/utils/proving_kzg.rs:19:5
+   |
+19 | use rmp_serde::config;
+   |     ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `GADGET_CONFIG`
+  --> src/utils/proving_kzg.rs:20:35
+   |
+20 | use crate::{model::{ModelCircuit, GADGET_CONFIG}, utils::helpers::{get_public_values, poly_divmod}};
+   |                                   ^^^^^^^^^^^^^
+
+warning: `halo2_gadgets` (lib) generated 18 warnings (1 duplicate)
+warning: unused import: `Group`
+ --> src/utils/proving_kzg.rs:8:13
+  |
+8 | use group::{Group, prime::PrimeCurveAffine};
+  |             ^^^^^
+
+warning: unused import: `VerificationStrategy`
+  --> src/utils/proving_kzg.rs:10:492
+   |
+10 | ...in, LagrangeCoeff, Polynomial, ProverQuery, Rotation, VerificationStrategy, VerifierQuery}, transcript::{
+   |                                                          ^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `EncodedChallenge`
+  --> src/utils/proving_kzg.rs:11:52
+   |
+11 |     self, Blake2bRead, Blake2bWrite, Challenge255, EncodedChallenge, Transcript, TranscriptRead, TranscriptReadBuffer, TranscriptWri...
+   |                                                    ^^^^^^^^^^^^^^^^
+
+warning: unused import: `Group`
+  --> src/utils/proving_ipa.rs:10:44
+   |
+10 | use group::{cofactor::CofactorCurveAffine, Group};
+   |                                            ^^^^^
+
+warning: unused variable: `columns`
+  --> src/gadgets/poly.rs:41:9
+   |
+41 |     let columns = &gadget_config.columns;
+   |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_columns`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: variable does not need to be mutable
+   --> src/gadgets/poly.rs:160:9
+    |
+160 |     let mut a_i = vec_inputs[0].clone();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: variable does not need to be mutable
+   --> src/gadgets/poly.rs:161:9
+    |
+161 |     let mut b_i = vec_inputs[1].clone();
+    |         ----^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: unused variable: `a_cols`
+   --> src/gadgets/poly.rs:166:13
+    |
+166 |         let a_cols = a_i
+    |             ^^^^^^ help: if this is intentional, prefix it with an underscore: `_a_cols`
+
+warning: unused variable: `a_cols`
+   --> src/gadgets/poly.rs:172:13
+    |
+172 |         let a_cols = PolyChip::<F>::get_a_columns(&self.config);
+    |             ^^^^^^ help: if this is intentional, prefix it with an underscore: `_a_cols`
+
+warning: unused variable: `zero`
+   --> src/gadgets/poly.rs:158:9
+    |
+158 |     let zero = &single_inputs[0];
+    |         ^^^^ help: if this is intentional, prefix it with an underscore: `_zero`
+
+warning: unused variable: `vec_inputs`
+   --> src/gadgets/poly_2.rs:141:5
+    |
+141 |     vec_inputs: &Vec<Vec<&AssignedCell<F, F>>>,
+    |     ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_vec_inputs`
+
+warning: unused variable: `cols`
+   --> src/gadgets/poly_2.rs:203:9
+    |
+203 |     let cols = &self.config.columns_poly;
+    |         ^^^^ help: if this is intentional, prefix it with an underscore: `_cols`
+
+warning: unused variable: `num_inputs`
+  --> src/gadgets/poly_3.rs:33:9
+   |
+33 |     let num_inputs = (columns.len() - 3) / 2;
+   |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_num_inputs`
+
+warning: variable does not need to be mutable
+  --> src/gadgets/poly_3.rs:70:11
+   |
+70 |       let mut res = gate_coeffs
+   |           ----^^^
+   |           |
+   |           help: remove this `mut`
+
+warning: unused variable: `alpha`
+   --> src/gadgets/poly_3.rs:179:61
+    |
+179 |     let alphas = self.alphas.iter().enumerate().map(| (idx, alpha)| {
+    |                                                             ^^^^^ help: if this is intentional, prefix it with an underscore: `_alpha`
+
+warning: unused variable: `alphas`
+   --> src/gadgets/poly_3.rs:179:9
+    |
+179 |     let alphas = self.alphas.iter().enumerate().map(| (idx, alpha)| {
+    |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_alphas`
+
+warning: unused variable: `column`
+  --> src/gadgets/poly_4.rs:63:11
+   |
+63 |       for column in 0..gadget_config.columns_poly.len() - 2 {
+   |           ^^^^^^ help: if this is intentional, prefix it with an underscore: `_column`
+
+warning: unused variable: `gate_output`
+  --> src/gadgets/poly_4.rs:85:11
+   |
+85 |       let gate_output = meta.query_advice(columns[columns.len() - 1], Rotation::cur());
+   |           ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_gate_output`
+
+warning: unused variable: `coeff_cells`
+   --> src/gadgets/poly_4.rs:170:9
+    |
+170 |     let coeff_cells: Vec<_> = (0..coeffs_vec.len())
+    |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_coeff_cells`
+
+warning: unused variable: `cols`
+   --> src/gadgets/poly_4.rs:210:9
+    |
+210 |     let cols = &self.config.columns_poly;
+    |         ^^^^ help: if this is intentional, prefix it with an underscore: `_cols`
+
+warning: unused variable: `vec_inputs`
+   --> src/gadgets/poly_5.rs:110:5
+    |
+110 |     vec_inputs: &Vec<Vec<&AssignedCell<F, F>>>,
+    |     ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_vec_inputs`
+
+warning: unused variable: `print_arr`
+   --> src/layers/dag.rs:466:9
+    |
+466 |     let print_arr = if final_out.len() > 0 {
+    |         ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_print_arr`
+
+warning: unused variable: `idx`
+   --> src/model.rs:494:12
+    |
+494 |       for (idx, tensor) in tensors.iter() {
+    |            ^^^ help: if this is intentional, prefix it with an underscore: `_idx`
+
+warning: unused variable: `val`
+   --> src/model.rs:495:13
+    |
+495 |         for val in tensor {
+    |             ^^^ help: if this is intentional, prefix it with an underscore: `_val`
+
+warning: unused variable: `flat`
+   --> src/model.rs:916:38
+    |
+916 |       let (mut remainder_tensor_map, flat, flat_f) = self
+    |                                      ^^^^ help: if this is intentional, prefix it with an underscore: `_flat`
+
+warning: unused variable: `flat_f`
+   --> src/model.rs:916:44
+    |
+916 |       let (mut remainder_tensor_map, flat, flat_f) = self
+    |                                            ^^^^^^ help: if this is intentional, prefix it with an underscore: `_flat_f`
+
+warning: unused variable: `vals`
+   --> src/model.rs:967:11
+    |
+967 |       let vals = layouter.assign_region(|| "", |mut region| {
+    |           ^^^^ help: if this is intentional, prefix it with an underscore: `_vals`
+
+warning: unused variable: `result`
+    --> src/model.rs:1046:30
+     |
+1046 |       let (final_tensor_map, result) = dag_chip.forward(
+     |                              ^^^^^^ help: if this is intentional, prefix it with an underscore: `_result`
+
+warning: unused variable: `alpha`
+   --> src/utils/barycentric.rs:165:5
+    |
+165 |     alpha: halo2_proofs::halo2curves::pasta::Fp,
+    |     ^^^^^ help: if this is intentional, prefix it with an underscore: `_alpha`
+
+warning: unused variable: `chunk_size`
+   --> src/utils/barycentric.rs:194:9
+    |
+194 |     let chunk_size = poly_advice.values.len();  // Size of this chunk in the domain
+    |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_chunk_size`
+
+warning: unused variable: `omega`
+   --> src/utils/barycentric.rs:196:9
+    |
+196 |     let omega = domain.get_omega();
+    |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_omega`
+
+warning: unused variable: `advice_com`
+   --> src/utils/barycentric.rs:449:5
+    |
+449 |     advice_com: Vec<EqAffine>,
+    |     ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_advice_com`
+
+warning: unused variable: `prefix`
+  --> src/utils/helpers.rs:62:37
+   |
+62 | pub fn print_pos_int<F: PrimeField>(prefix: &str, x: Value<F>, scale_factor: u64) {
+   |                                     ^^^^^^ help: if this is intentional, prefix it with an underscore: `_prefix`
+
+warning: unused variable: `tmp_float`
+  --> src/utils/helpers.rs:64:7
+   |
+64 |   let tmp_float = tmp as f64 / scale_factor as f64;
+   |       ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_tmp_float`
+
+warning: unused variable: `poly_coms`
+   --> src/utils/helpers.rs:171:5
+    |
+171 |     poly_coms: Vec<Scheme::Curve>,
+    |     ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_poly_coms`
+
+warning: unused variable: `r`
+   --> src/utils/helpers.rs:233:15
+    |
+233 |       let (h, r) = poly_divmod(&(u.clone() - &uprime_shift), &z_v);
+    |               ^ help: if this is intentional, prefix it with an underscore: `_r`
+
+warning: unused variable: `z_v_com`
+   --> src/utils/helpers.rs:200:3
+    |
+200 |   z_v_com: E::G2,
+    |   ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_z_v_com`
+
+warning: unused variable: `u_com`
+   --> src/utils/helpers.rs:201:3
+    |
+201 |   u_com: E::G1,
+    |   ^^^^^ help: if this is intentional, prefix it with an underscore: `_u_com`
+
+warning: unused variable: `betas`
+   --> src/utils/helpers.rs:208:7
+    |
+208 |   let betas = (0..l).map(|_| Polynomial::<E::Scalar, Coeff>::from_coefficients_vec(vec![E::Scalar::random(rng.clone()); 3])).collec...
+    |       ^^^^^ help: if this is intentional, prefix it with an underscore: `_betas`
+
+warning: unused variable: `randos`
+   --> src/utils/helpers.rs:258:7
+    |
+258 |   let randos = polys.iter().map(|_| E::Scalar::random(rng.clone())).collect::<Vec<_>>();
+    |       ^^^^^^ help: if this is intentional, prefix it with an underscore: `_randos`
+
+warning: unused variable: `evals_1`
+   --> src/utils/helpers.rs:261:17
+    |
+261 |   let (proof_1, evals_1) = create_proof::<
+    |                 ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_evals_1`
+
+warning: unused variable: `evals`
+   --> src/utils/helpers.rs:269:17
+    |
+269 |   let (proof_2, evals) = create_proof::<
+    |                 ^^^^^ help: if this is intentional, prefix it with an underscore: `_evals`
+
+warning: unused variable: `z_last`
+   --> src/utils/helpers.rs:322:3
+    |
+322 |   z_last: Polynomial<E::Scalar, Coeff>,
+    |   ^^^^^^ help: if this is intentional, prefix it with an underscore: `_z_last`
+
+warning: unused variable: `qus_timer`
+   --> src/utils/helpers.rs:336:7
+    |
+336 |   let qus_timer = Instant::now();
+    |       ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_qus_timer`
+
+warning: unused variable: `HH_vals`
+   --> src/utils/helpers.rs:338:7
+    |
+338 |   let HH_vals: Vec<E::Scalar> = powers(HH.get_omega()).take(10).collect();
+    |       ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_HH_vals`
+
+warning: unused variable: `rng`
+   --> src/utils/helpers.rs:340:7
+    |
+340 |   let rng = OsRng;
+    |       ^^^ help: if this is intentional, prefix it with an underscore: `_rng`
+
+warning: unused variable: `bigqu_timer`
+   --> src/utils/helpers.rs:354:7
+    |
+354 |   let bigqu_timer = Instant::now();
+    |       ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_bigqu_timer`
+
+warning: unused variable: `vanishing_poly`
+   --> src/utils/helpers.rs:366:7
+    |
+366 |   let vanishing_poly = HH.coeff_from_vec(vanishing);
+    |       ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_vanishing_poly`
+
+warning: unused variable: `commit_timer`
+   --> src/utils/helpers.rs:381:7
+    |
+381 |   let commit_timer = Instant::now();
+    |       ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_commit_timer`
+
+warning: unused variable: `rem`
+   --> src/utils/helpers.rs:419:11
+    |
+419 |   let (w, rem) = (otilde - &Polynomial::from_coefficients_vec(vec![zz])).divide_with_q_and_r(&Polynomial::from_coefficients_vec(vec...
+    |           ^^^ help: if this is intentional, prefix it with an underscore: `_rem`
+
+warning: unused variable: `rng`
+   --> src/utils/helpers.rs:449:9
+    |
+449 |     let rng = OsRng;
+    |         ^^^ help: if this is intentional, prefix it with an underscore: `_rng`
+
+warning: unused variable: `HH`
+   --> src/utils/helpers.rs:503:3
+    |
+503 |   HH: &EvaluationDomain<E::Scalar>,
+    |   ^^ help: if this is intentional, prefix it with an underscore: `_HH`
+
+warning: unused variable: `rng`
+   --> src/utils/helpers.rs:519:7
+    |
+519 |   let rng = OsRng;
+    |       ^^^ help: if this is intentional, prefix it with an underscore: `_rng`
+
+warning: unused variable: `rem`
+   --> src/utils/helpers.rs:587:11
+    |
+587 |   let (w, rem) = (otilde - &Polynomial::from_coefficients_vec(vec![zz])).divide_with_q_and_r(&Polynomial::from_coefficients_vec(vec...
+    |           ^^^ help: if this is intentional, prefix it with an underscore: `_rem`
+
+warning: unused variable: `term1`
+   --> src/utils/helpers.rs:620:7
+    |
+620 |   let term1 = P::pairing(&wcom.to_affine(), &params.commit_g2(&Polynomial::from_coefficients_vec(vec![-x, P::Scalar::ONE])).to_affi...
+    |       ^^^^^ help: if this is intentional, prefix it with an underscore: `_term1`
+
+warning: unused variable: `term5`
+   --> src/utils/helpers.rs:626:7
+    |
+626 |   let term5 = P::pairing(&params.commit_g1(&Polynomial::from_coefficients_vec(vec![z])).to_affine(), &params.s_g2());
+    |       ^^^^^ help: if this is intentional, prefix it with an underscore: `_term5`
+
+warning: variable does not need to be mutable
+  --> src/utils/loader.rs:41:7
+   |
+41 |   let mut model: ModelMsgpack = {
+   |       ----^^^^^
+   |       |
+   |       help: remove this `mut`
+
+warning: unused variable: `witness_column`
+  --> src/utils/loader.rs:40:47
+   |
+40 | pub fn load_config_msgpack(config_path: &str, witness_column: bool) -> ModelMsgpack {
+   |                                               ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_witness_column`
+
+warning: variable does not need to be mutable
+  --> src/utils/proving_ipa.rs:55:7
+   |
+55 |   let mut rng = &mut rand::thread_rng();
+   |       ----^^^
+   |       |
+   |       help: remove this `mut`
+
+warning: variable does not need to be mutable
+  --> src/utils/proving_ipa.rs:71:7
+   |
+71 |   let mut transcript_proof =
+   |       ----^^^^^^^^^^^^^^^^
+   |       |
+   |       help: remove this `mut`
+
+warning: unused variable: `tensor_idx`
+  --> src/utils/proving_ipa.rs:63:8
+   |
+63 |   for (tensor_idx, tensor) in circuit.tensors.clone() {
+   |        ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_tensor_idx`
+
+warning: unused variable: `transcript_proof`
+  --> src/utils/proving_ipa.rs:71:7
+   |
+71 |   let mut transcript_proof =
+   |       ^^^^^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_transcript_proof`
+
+warning: variable `polys` is assigned to, but never used
+   --> src/utils/proving_ipa.rs:138:7
+    |
+138 |   let mut polys = vec![Polynomial::from_coefficients_vec(poly_coeff.clone())];
+    |       ^^^^^^^^^
+    |
+    = note: consider using `_polys` instead
+
+warning: unused variable: `i`
+   --> src/utils/proving_ipa.rs:195:7
+    |
+195 |   for i in 0..num_runs {
+    |       ^
+    |
+help: you might have meant to pattern match on the similarly named constant `L`
+    |
+195 -   for i in 0..num_runs {
+195 +   for commitments::poseidon_commit::L in 0..num_runs {
+    |
+help: if this is intentional, prefix it with an underscore
+    |
+195 |   for _i in 0..num_runs {
+    |       +
+
+warning: value assigned to `polys` is never read
+   --> src/utils/proving_ipa.rs:140:5
+    |
+140 |     polys = (0..poly_col_len).map(|x| {
+    |     ^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+    = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `tensor_idx`
+   --> src/utils/proving_kzg.rs:110:8
+    |
+110 |   for (tensor_idx, tensor) in circuit.tensors.clone() {
+    |        ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_tensor_idx`
+
+warning: variable `polys` is assigned to, but never used
+   --> src/utils/proving_kzg.rs:123:7
+    |
+123 |   let mut polys = vec![];
+    |       ^^^^^^^^^
+    |
+    = note: consider using `_polys` instead
+
+warning: unused variable: `rho`
+   --> src/utils/proving_kzg.rs:145:7
+    |
+145 |   let rho = poly.evaluate(beta);
+    |       ^^^ help: if this is intentional, prefix it with an underscore: `_rho`
+
+warning: unused variable: `zs`
+   --> src/utils/proving_kzg.rs:240:24
+    |
+240 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, witness_size, l, &params);
+    |                        ^^ help: if this is intentional, prefix it with an underscore: `_zs`
+
+warning: unused variable: `z_last`
+   --> src/utils/proving_kzg.rs:240:33
+    |
+240 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, witness_size, l, &params);
+    |                                 ^^^^^^ help: if this is intentional, prefix it with an underscore: `_z_last`
+
+warning: unused variable: `zhats`
+   --> src/utils/proving_kzg.rs:240:41
+    |
+240 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, witness_size, l, &params);
+    |                                         ^^^^^ help: if this is intentional, prefix it with an underscore: `_zhats`
+
+warning: unused variable: `z_coms`
+   --> src/utils/proving_kzg.rs:240:48
+    |
+240 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, witness_size, l, &params);
+    |                                                ^^^^^^ help: if this is intentional, prefix it with an underscore: `_z_coms`
+
+warning: unused variable: `zhat_coms`
+   --> src/utils/proving_kzg.rs:240:56
+    |
+240 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, witness_size, l, &params);
+    |                                                        ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_zhat_coms`
+
+warning: unused variable: `coeffs`
+   --> src/utils/proving_kzg.rs:243:11
+    |
+243 |       let coeffs = vals.iter().map(|x| HH.lagrange_from_vec(x.clone())).collect::<Vec<_>>();
+    |           ^^^^^^ help: if this is intentional, prefix it with an underscore: `_coeffs`
+
+warning: unused variable: `polys`
+   --> src/utils/proving_kzg.rs:246:11
+    |
+246 |       let polys: Vec<_> = advice_lagrange.iter().map(|poly |HH.lagrange_to_coeff(poly.clone())).collect();
+    |           ^^^^^ help: if this is intentional, prefix it with an underscore: `_polys`
+
+warning: unused variable: `cp2_prove`
+   --> src/utils/proving_kzg.rs:254:34
+    |
+254 |       let (uprimes, uprime_coms, cp2_prove, cp2_vfy, cp2_proof_size) = cplink2(thetas, HH.clone(), u, z_v.clone(), z_v_com, u_com, ...
+    |                                  ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_cp2_prove`
+
+warning: unused variable: `cp2_vfy`
+   --> src/utils/proving_kzg.rs:254:45
+    |
+254 |       let (uprimes, uprime_coms, cp2_prove, cp2_vfy, cp2_proof_size) = cplink2(thetas, HH.clone(), u, z_v.clone(), z_v_com, u_com, ...
+    |                                             ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_cp2_vfy`
+
+warning: unused variable: `zs`
+   --> src/utils/proving_kzg.rs:325:24
+    |
+325 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, size * chunks_per_column, l, &params);
+    |                        ^^ help: if this is intentional, prefix it with an underscore: `_zs`
+
+warning: unused variable: `z_last`
+   --> src/utils/proving_kzg.rs:325:33
+    |
+325 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, size * chunks_per_column, l, &params);
+    |                                 ^^^^^^ help: if this is intentional, prefix it with an underscore: `_z_last`
+
+warning: unused variable: `zhats`
+   --> src/utils/proving_kzg.rs:325:41
+    |
+325 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, size * chunks_per_column, l, &params);
+    |                                         ^^^^^ help: if this is intentional, prefix it with an underscore: `_zhats`
+
+warning: unused variable: `z_coms`
+   --> src/utils/proving_kzg.rs:325:48
+    |
+325 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, size * chunks_per_column, l, &params);
+    |                                                ^^^^^^ help: if this is intentional, prefix it with an underscore: `_z_coms`
+
+warning: unused variable: `zhat_coms`
+   --> src/utils/proving_kzg.rs:325:56
+    |
+325 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, size * chunks_per_column, l, &params);
+    |                                                        ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_zhat_coms`
+
+warning: unused variable: `cp2_prove`
+   --> src/utils/proving_kzg.rs:353:36
+    |
+353 | ...   let (uprimes, uprime_coms, cp2_prove, cp2_vfy, cp2_proof_size) = cplink2(thetas[..chunks_left].to_vec().clone(), HH.clone(), ...
+    |                                  ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_cp2_prove`
+
+warning: unused variable: `cp2_vfy`
+   --> src/utils/proving_kzg.rs:353:47
+    |
+353 | ...   let (uprimes, uprime_coms, cp2_prove, cp2_vfy, cp2_proof_size) = cplink2(thetas[..chunks_left].to_vec().clone(), HH.clone(), ...
+    |                                             ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_cp2_vfy`
+
+warning: value assigned to `polys` is never read
+   --> src/utils/proving_kzg.rs:125:5
+    |
+125 |     polys = (0..poly_col_len).map(|x| {
+    |     ^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: field `alphas` is never read
+  --> src/gadgets/poly_4.rs:23:3
+   |
+18 | pub struct Poly4Chip<F: PrimeField> {
+   |            --------- field in this struct
+...
+23 |   alphas: Vec<F>,
+   |   ^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: field `alphas` is never read
+  --> src/gadgets/poly_5.rs:21:3
+   |
+16 | pub struct Poly5Chip<F: PrimeField> {
+   |            --------- field in this struct
+...
+21 |   alphas: Vec<F>,
+   |   ^^^^^^
+
+warning: type alias `Bn256G1` is never used
+  --> src/model.rs:67:6
+   |
+67 | type Bn256G1 =  <Bn256 as Engine>::G1Affine;
+   |      ^^^^^^^
+
+warning: methods `ecc_chip_config` and `config_range` are never used
+   --> src/model.rs:98:6
+    |
+ 97 | impl<F: PrimeField + Ord + FromUniformBytes<64>>  ModelConfig<F> {
+    | ---------------------------------------------------------------- methods in this implementation
+ 98 |   fn ecc_chip_config(&self) -> EccConfig {
+    |      ^^^^^^^^^^^^^^^
+...
+102 |   fn config_range<N: PrimeField>(
+    |      ^^^^^^^^^^^^
+
+warning: field `omega_powers` is never read
+  --> src/utils/barycentric.rs:33:5
+   |
+31 | pub struct BarycentricPrecomputed {
+   |            ---------------------- field in this struct
+32 |     /// Omega powers: ω^i for i = 0 to dim-1
+33 |     omega_powers: Vec<halo2_proofs::halo2curves::pasta::Fp>,
+   |     ^^^^^^^^^^^^
+
+warning: method `omega_powers` is never used
+   --> src/utils/barycentric.rs:130:8
+    |
+128 | impl<'a> BarycentricValues<'a> {
+    | ------------------------------ method in this implementation
+129 |     /// Get omega powers reference
+130 |     fn omega_powers(&self) -> &[halo2_proofs::halo2curves::pasta::Fp] {
+    |        ^^^^^^^^^^^^
+
+warning: function `inner_product_zkfft` is never used
+   --> src/utils/helpers.rs:643:4
+    |
+643 | fn inner_product_zkfft(a: &[halo2_proofs::halo2curves::pasta::Fp], b: &[halo2_proofs::halo2curves::pasta::Fp]) -> halo2_proofs::hal...
+    |    ^^^^^^^^^^^^^^^^^^^
+
+warning: using `.clone()` on a double reference, which returns `&AssignedCell<F, F>` instead of cloning the inner type
+   --> src/gadgets/dot_prod.rs:190:77
+    |
+190 |               .op_row_region(&mut region, i, &vec![inp, weights], &vec![zero.clone()])
+    |                                                                             ^^^^^^^^
+    |
+    = note: `#[warn(suspicious_double_ref_op)]` on by default
+
+warning: variable `HH` should have a snake case name
+   --> src/utils/helpers.rs:197:3
+    |
+197 |   HH: EvaluationDomain<E::Scalar>, 
+    |   ^^ help: convert the identifier to snake case: `hh`
+    |
+    = note: `#[warn(non_snake_case)]` (part of `#[warn(nonstandard_style)]`) on by default
+
+warning: variable `HH` should have a snake case name
+   --> src/utils/helpers.rs:323:3
+    |
+323 |   HH: EvaluationDomain<E::Scalar>,
+    |   ^^ help: convert the identifier to snake case: `hh`
+
+warning: variable `HH_vals` should have a snake case name
+   --> src/utils/helpers.rs:338:7
+    |
+338 |   let HH_vals: Vec<E::Scalar> = powers(HH.get_omega()).take(10).collect();
+    |       ^^^^^^^ help: convert the identifier to snake case: `hh_vals`
+
+warning: variable `HH` should have a snake case name
+   --> src/utils/helpers.rs:446:9
+    |
+446 |     let HH = EvaluationDomain::<E::Scalar>::new(1, col_size);
+    |         ^^ help: convert the identifier to snake case: `hh`
+
+warning: variable `HH_vals` should have a snake case name
+   --> src/utils/helpers.rs:453:9
+    |
+453 |     let HH_vals = powers(HH.get_omega()).take(n as usize).collect::<Vec<_>>();
+    |         ^^^^^^^ help: convert the identifier to snake case: `hh_vals`
+
+warning: variable `HH` should have a snake case name
+   --> src/utils/helpers.rs:503:3
+    |
+503 |   HH: &EvaluationDomain<E::Scalar>,
+    |   ^^ help: convert the identifier to snake case: `hh`
+
+warning: variable `L_terms` should have a snake case name
+   --> src/utils/helpers.rs:810:17
+    |
+810 |         let mut L_terms: Vec<(Fp, EqAffine)> = a1.iter()
+    |                 ^^^^^^^ help: convert the identifier to snake case: `l_terms`
+
+warning: variable `L` should have a snake case name
+   --> src/utils/helpers.rs:816:13
+    |
+816 |         let L = multiexp_affine_zkfft(&L_terms);
+    |             ^ help: convert the identifier to snake case: `l`
+
+warning: variable `R_terms` should have a snake case name
+   --> src/utils/helpers.rs:819:17
+    |
+819 |         let mut R_terms: Vec<(Fp, EqAffine)> = a2.iter()
+    |                 ^^^^^^^ help: convert the identifier to snake case: `r_terms`
+
+warning: variable `R` should have a snake case name
+   --> src/utils/helpers.rs:825:13
+    |
+825 |         let R = multiexp_affine_zkfft(&R_terms);
+    |             ^ help: convert the identifier to snake case: `r`
+
+warning: variable `A_terms` should have a snake case name
+   --> src/utils/helpers.rs:862:13
+    |
+862 |     let mut A_terms = vec![(r, g_bold[0]), (delta, generator_h)];
+    |             ^^^^^^^ help: convert the identifier to snake case: `a_terms`
+
+warning: variable `A` should have a snake case name
+   --> src/utils/helpers.rs:864:9
+    |
+864 |     let A = multiexp_affine_zkfft(&A_terms);
+    |         ^ help: convert the identifier to snake case: `a`
+
+warning: variable `L_terms` should have a snake case name
+   --> src/utils/helpers.rs:987:17
+    |
+987 |         let mut L_terms: Vec<(Fp, EqAffine)> = a1.iter()
+    |                 ^^^^^^^ help: convert the identifier to snake case: `l_terms`
+
+warning: variable `L` should have a snake case name
+   --> src/utils/helpers.rs:993:13
+    |
+993 |         let L = multiexp_affine_zkfft(&L_terms);
+    |             ^ help: convert the identifier to snake case: `l`
+
+warning: variable `R_terms` should have a snake case name
+   --> src/utils/helpers.rs:996:17
+    |
+996 |         let mut R_terms: Vec<(Fp, EqAffine)> = a2.iter()
+    |                 ^^^^^^^ help: convert the identifier to snake case: `r_terms`
+
+warning: variable `R` should have a snake case name
+    --> src/utils/helpers.rs:1002:13
+     |
+1002 |         let R = multiexp_affine_zkfft(&R_terms);
+     |             ^ help: convert the identifier to snake case: `r`
+
+warning: variable `A_terms` should have a snake case name
+    --> src/utils/helpers.rs:1038:13
+     |
+1038 |     let mut A_terms = vec![(r, g_bold[0]), (delta, generator_h)];
+     |             ^^^^^^^ help: convert the identifier to snake case: `a_terms`
+
+warning: variable `A` should have a snake case name
+    --> src/utils/helpers.rs:1040:9
+     |
+1040 |     let A = multiexp_affine_zkfft(&A_terms);
+     |         ^ help: convert the identifier to snake case: `a`
+
+warning: variable `commitment_P` should have a snake case name
+    --> src/utils/helpers.rs:1093:5
+     |
+1093 |     commitment_P: halo2_proofs::halo2curves::pasta::EqAffine,
+     |     ^^^^^^^^^^^^ help: convert the identifier to snake case: `commitment_p`
+
+warning: variable `L_points` should have a snake case name
+    --> src/utils/helpers.rs:1108:13
+     |
+1108 |     let mut L_points = Vec::with_capacity(m);
+     |             ^^^^^^^^ help: convert the identifier to snake case: `l_points`
+
+warning: variable `R_points` should have a snake case name
+    --> src/utils/helpers.rs:1109:13
+     |
+1109 |     let mut R_points = Vec::with_capacity(m);
+     |             ^^^^^^^^ help: convert the identifier to snake case: `r_points`
+
+warning: variable `L` should have a snake case name
+    --> src/utils/helpers.rs:1112:13
+     |
+1112 |         let L = transcript.read_point().unwrap();
+     |             ^ help: convert the identifier to snake case: `l`
+
+warning: variable `R` should have a snake case name
+    --> src/utils/helpers.rs:1113:13
+     |
+1113 |         let R = transcript.read_point().unwrap();
+     |             ^ help: convert the identifier to snake case: `r`
+
+warning: variable `A` should have a snake case name
+    --> src/utils/helpers.rs:1123:9
+     |
+1123 |     let A = transcript.read_point().unwrap();
+     |         ^ help: convert the identifier to snake case: `a`
+
+warning: variable `P_terms` should have a snake case name
+   --> src/utils/proving_ipa.rs:370:15
+    |
+370 |       let mut P_terms: Vec<(Fp, EqAffine)> = Vec::new();
+    |               ^^^^^^^ help: convert the identifier to snake case: `p_terms`
+
+warning: variable `commitment_P` should have a snake case name
+   --> src/utils/proving_ipa.rs:387:11
+    |
+387 |       let commitment_P: EqAffine = best_multiexp(&coeffs, &bases).into();
+    |           ^^^^^^^^^^^^ help: convert the identifier to snake case: `commitment_p`
+
+warning: variable `HH` should have a snake case name
+   --> src/utils/proving_kzg.rs:240:12
+    |
+240 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, witness_size, l, &params);
+    |            ^^ help: convert the identifier to snake case: `hh`
+
+warning: variable `HH` should have a snake case name
+   --> src/utils/proving_kzg.rs:325:12
+    |
+325 |       let (HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup(col_size as u32, size * chunks_per_column, l, &params);
+    |            ^^ help: convert the identifier to snake case: `hh`
+
+warning: `zkml` (lib) generated 177 warnings (run `cargo fix --lib -p zkml` to apply 133 suggestions)
+warning: unused imports: `dev::MockProver`, `halo2curves::bn256::Fr`, and `self`
+ --> src/bin/params.rs:1:20
+  |
+1 | use halo2_proofs::{dev::MockProver, halo2curves::bn256::Fr, poly::{self, commitment::Params}};
+  |                    ^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^         ^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `Fp`
+ --> src/bin/time_circuit.rs:1:41
+  |
+1 | use halo2_proofs::halo2curves::{pasta::{Fp, EqAffine}};
+  |                                         ^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `ModelMsgpack`, `helpers::get_public_values`, `load_model_msgpack`, and `model::ModelCircuit`
+ --> src/bin/params.rs:4:3
+  |
+4 |   model::ModelCircuit,
+  |   ^^^^^^^^^^^^^^^^^^^
+5 |   utils::{
+6 |     helpers::get_public_values, loader::{load_model_msgpack, ModelMsgpack}, proving_ipa::get_ipa_params, proving_kzg::get_kzg_params
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^           ^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^
+
+warning: unused import: `halo2curves::bn256::Fr`
+ --> src/bin/test_circuit.rs:1:37
+  |
+1 | use halo2_proofs::{dev::MockProver, halo2curves::bn256::Fr, halo2curves::bn256::G1Affine};
+  |                                     ^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `halo2curves::bn256::Bn256`
+ --> src/bin/test_circuit.rs:2:5
+  |
+2 | use halo2curves::bn256::Bn256;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated function `wav::read`: This project is no longer maintained, use the `hound` crate
+  --> src/bin/verify_wav.rs:17:30
+   |
+17 |   let (_header, data) = wav::read(&mut wav_file).unwrap();
+   |                              ^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated tuple variant `wav::BitDepth::Sixteen`: This project is no longer maintained, use the `hound` crate
+  --> src/bin/verify_wav.rs:19:20
+   |
+19 |     wav::BitDepth::Sixteen(data) => data,
+   |                    ^^^^^^^
+
+warning: unused import: `commitment::Params`
+ --> src/bin/cp_link.rs:3:5
+  |
+3 | use commitment::Params;
+  |     ^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: use of deprecated field `wav::BitDepth::Sixteen::0`: This project is no longer maintained, use the `hound` crate
+  --> src/bin/verify_wav.rs:19:28
+   |
+19 |     wav::BitDepth::Sixteen(data) => data,
+   |                            ^^^^
+
+warning: unused variable: `poly_chunks`
+  --> src/bin/test_circuit.rs:15:7
+   |
+15 |   let poly_chunks: usize = std::env::args().nth(3).expect("poly chunks").parse().unwrap();
+   |       ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_poly_chunks`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `TranscriptRead`, `TranscriptWrite`, and `Transcript`
+  --> src/bin/cp_link.rs:13:92
+   |
+13 | ...nscriptReadBuffer, TranscriptWriterBuffer, TranscriptRead, TranscriptWrite, Transcript, EncodedChallenge};
+   |                                               ^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^  ^^^^^^^^^^
+
+warning: unused import: `halo2curves::bn256::Fr`
+  --> src/bin/cp_link.rs:17:5
+   |
+17 | use halo2curves::bn256::Fr;
+   |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `halo2_proofs::plonk::*`
+  --> src/bin/cp_link.rs:21:5
+   |
+21 | use halo2_proofs::plonk::*;
+   |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `halo2curves::bn256::Gt`
+  --> src/bin/cp_link.rs:22:5
+   |
+22 | use halo2curves::bn256::Gt;
+   |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `halo2curves::bn256::G1`
+  --> src/bin/cp_link.rs:23:5
+   |
+23 | use halo2curves::bn256::G1;
+   |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `halo2curves::pasta::pallas::Scalar`
+  --> src/bin/cp_link.rs:27:5
+   |
+27 | use halo2curves::pasta::pallas::Scalar;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `kzg::msm::DualMSM`
+  --> src/bin/cp_link.rs:30:5
+   |
+30 | use kzg::msm::DualMSM;
+   |     ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `rand::RngCore`
+  --> src/bin/cp_link.rs:39:5
+   |
+39 | use rand::RngCore;
+   |     ^^^^^^^^^^^^^
+
+warning: unused import: `zkml::gadgets::square`
+  --> src/bin/cp_link.rs:41:5
+   |
+41 | use zkml::gadgets::square;
+   |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `Add`, `Div`, `Neg`, and `Sub`
+  --> src/bin/cp_link.rs:44:16
+   |
+44 | use std::ops::{Add, Div, Mul, Neg, Sub};
+   |                ^^^  ^^^       ^^^  ^^^
+
+warning: unused imports: `Args` and `args`
+  --> src/bin/cp_link.rs:46:22
+   |
+46 | use std::env::{self, args, Args};
+   |                      ^^^^  ^^^^
+
+warning: unused import: `std::fs`
+  --> src/bin/cp_link.rs:47:5
+   |
+47 | use std::fs;
+   |     ^^^^^^^
+
+warning: unused import: `std::collections::BTreeMap`
+  --> src/bin/cp_link.rs:48:5
+   |
+48 | use std::collections::BTreeMap;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused variable: `dot_string`
+  --> src/bin/verify_circuit.rs:26:9
+   |
+26 |     let dot_string = halo2_proofs::dev::circuit_dot_graph(&circuit);
+   |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_dot_string`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `Fp` and `Fr`
+ --> src/bin/load_circuit.rs:1:41
+  |
+1 | use halo2_proofs::halo2curves::{bn256::{Fr, G1Affine}, pasta::{Fp, EqAffine}};
+  |                                         ^^                     ^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `Fp` and `Fr`
+ --> src/bin/draw_circuit.rs:1:41
+  |
+1 | use halo2_proofs::halo2curves::{bn256::{Fr, G1Affine}, pasta::{Fp, EqAffine}};
+  |                                         ^^                     ^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `proving_ipa::time_circuit_ipa` and `proving_kzg::time_circuit_kzg`
+ --> src/bin/load_circuit.rs:4:11
+  |
+4 |   utils::{proving_ipa::time_circuit_ipa, proving_kzg::time_circuit_kzg},
+  |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `graphviz_rust::*`
+ --> src/bin/load_circuit.rs:6:5
+  |
+6 | use graphviz_rust::*;
+  |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::fs`
+ --> src/bin/load_circuit.rs:7:5
+  |
+7 | use std::fs;
+  |     ^^^^^^^
+
+warning: unused imports: `proving_ipa::time_circuit_ipa` and `proving_kzg::time_circuit_kzg`
+ --> src/bin/draw_circuit.rs:4:11
+  |
+4 |   utils::{proving_ipa::time_circuit_ipa, proving_kzg::time_circuit_kzg},
+  |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `graphviz_rust::*`
+ --> src/bin/draw_circuit.rs:6:5
+  |
+6 | use graphviz_rust::*;
+  |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::fs`
+ --> src/bin/draw_circuit.rs:7:5
+  |
+7 | use std::fs;
+  |     ^^^^^^^
+
+warning: unused variable: `fname`
+  --> src/bin/load_circuit.rs:13:7
+   |
+13 |   let fname = std::env::args().nth(6).expect("graphic file name");
+   |       ^^^^^ help: if this is intentional, prefix it with an underscore: `_fname`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `circuit`
+  --> src/bin/load_circuit.rs:23:9
+   |
+23 |     let circuit = ModelCircuit::<G1Affine>::generate_from_file(&config_fname, &inp_fname, witness_column, 0, 17, 10, false, false);
+   |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_circuit`
+
+warning: unused variable: `circuit`
+  --> src/bin/load_circuit.rs:35:9
+   |
+35 |     let circuit = ModelCircuit::<EqAffine>::generate_from_file(&config_fname, &inp_fname, false, 0, 17, 10, false, false);
+   |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_circuit`
+
+warning: unused import: `utils::loader::load_config_msgpack`
+  --> src/bin/estimate_cost.rs:44:3
+   |
+44 |   utils::loader::load_config_msgpack,
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `dot_string`
+  --> src/bin/draw_circuit.rs:25:9
+   |
+25 |     let dot_string = halo2_proofs::dev::circuit_dot_graph(&circuit);
+   |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_dot_string`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `circuit`
+  --> src/bin/draw_circuit.rs:35:9
+   |
+35 |     let circuit = ModelCircuit::<EqAffine>::generate_from_file(&config_fname, &inp_fname, false, 0, 17, 10, false, false);
+   |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_circuit`
+
+warning: function `circuit_cost_without_permutation` is never used
+  --> src/bin/estimate_cost.rs:48:4
+   |
+48 | fn circuit_cost_without_permutation(circuit: ModelCircuit<G1Affine>, k: u64) -> u64 {
+   |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `num_traits::Pow`
+  --> src/bin/cp_link.rs:37:5
+   |
+37 | use num_traits::Pow;
+   |     ^^^^^^^^^^^^^^^
+
+warning: unused variable: `rng`
+   --> src/bin/cp_link.rs:235:9
+    |
+235 |     let rng = OsRng;
+    |         ^^^ help: if this is intentional, prefix it with an underscore: `_rng`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `z_last`
+   --> src/bin/cp_link.rs:288:5
+    |
+288 |     z_last: Polynomial<E::Scalar, Coeff>,
+    |     ^^^^^^ help: if this is intentional, prefix it with an underscore: `_z_last`
+
+warning: unused variable: `qus_timer`
+   --> src/bin/cp_link.rs:301:9
+    |
+301 |     let qus_timer = Instant::now();
+    |         ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_qus_timer`
+
+warning: unused variable: `HH_vals`
+   --> src/bin/cp_link.rs:303:9
+    |
+303 |     let HH_vals: Vec<E::Scalar> = powers(HH.get_omega()).take(10).collect();
+    |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_HH_vals`
+
+warning: unused variable: `rng`
+   --> src/bin/cp_link.rs:305:9
+    |
+305 |     let rng = OsRng;
+    |         ^^^ help: if this is intentional, prefix it with an underscore: `_rng`
+
+warning: unused variable: `bigqu_timer`
+   --> src/bin/cp_link.rs:319:9
+    |
+319 |     let bigqu_timer = Instant::now();
+    |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_bigqu_timer`
+
+warning: unused variable: `vanishing_poly`
+   --> src/bin/cp_link.rs:331:9
+    |
+331 |     let vanishing_poly = HH.coeff_from_vec(vanishing);
+    |         ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_vanishing_poly`
+
+warning: unused variable: `commit_timer`
+   --> src/bin/cp_link.rs:343:9
+    |
+343 |     let commit_timer = Instant::now();
+    |         ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_commit_timer`
+
+warning: unused variable: `rem`
+   --> src/bin/cp_link.rs:381:13
+    |
+381 |     let (w, rem) = (otilde - &Polynomial::from_coefficients_vec(vec![zz])).divide_with_q_and_r(&Polynomial::from_coefficients_vec(v...
+    |             ^^^ help: if this is intentional, prefix it with an underscore: `_rem`
+
+warning: unused variable: `qus_timer`
+   --> src/bin/cp_link.rs:410:9
+    |
+410 |     let qus_timer = Instant::now();
+    |         ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_qus_timer`
+
+warning: unused variable: `HH_vals`
+   --> src/bin/cp_link.rs:411:9
+    |
+411 |     let HH_vals: Vec<E::Scalar> = powers(HH.get_omega()).take(10).collect();
+    |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_HH_vals`
+
+warning: unused variable: `rng`
+   --> src/bin/cp_link.rs:413:9
+    |
+413 |     let rng = OsRng;
+    |         ^^^ help: if this is intentional, prefix it with an underscore: `_rng`
+
+warning: unused variable: `rem`
+   --> src/bin/cp_link.rs:464:13
+    |
+464 |     let (w, rem) = (otilde - &Polynomial::from_coefficients_vec(vec![zz])).divide_with_q_and_r(&Polynomial::from_coefficients_vec(v...
+    |             ^^^ help: if this is intentional, prefix it with an underscore: `_rem`
+
+warning: unused variable: `r`
+   --> src/bin/cp_link.rs:543:17
+    |
+543 |         let (h, r) = poly_divmod(&(u.clone() - &uprime_shift), &z_v);
+    |                 ^ help: if this is intentional, prefix it with an underscore: `_r`
+
+warning: unused variable: `z_v_com`
+   --> src/bin/cp_link.rs:510:5
+    |
+510 |     z_v_com: E::G1,
+    |     ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_z_v_com`
+
+warning: unused variable: `u_coms`
+   --> src/bin/cp_link.rs:511:5
+    |
+511 |     u_coms: Vec<E::G1>,
+    |     ^^^^^^ help: if this is intentional, prefix it with an underscore: `_u_coms`
+
+warning: unused variable: `randos`
+   --> src/bin/cp_link.rs:568:9
+    |
+568 |     let randos = polys.iter().map(|_| E::Scalar::random(rng.clone())).collect::<Vec<_>>();
+    |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_randos`
+
+warning: unused variable: `evals_1`
+   --> src/bin/cp_link.rs:571:19
+    |
+571 |     let (proof_1, evals_1) = create_proof::<
+    |                   ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_evals_1`
+
+warning: unused variable: `evals`
+   --> src/bin/cp_link.rs:579:19
+    |
+579 |     let (proof_2, evals) = create_proof::<
+    |                   ^^^^^ help: if this is intentional, prefix it with an underscore: `_evals`
+
+warning: unused variable: `rng`
+   --> src/bin/cp_link.rs:677:9
+    |
+677 |     let rng = &mut OsRng;
+    |         ^^^ help: if this is intentional, prefix it with an underscore: `_rng`
+
+warning: unused variable: `prover_timer`
+   --> src/bin/cp_link.rs:682:9
+    |
+682 |     let prover_timer = Instant::now();
+    |         ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_prover_timer`
+
+warning: unused variable: `poly_timer`
+   --> src/bin/cp_link.rs:683:9
+    |
+683 |     let poly_timer = Instant::now();
+    |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_poly_timer`
+
+warning: unused variable: `rng`
+   --> src/bin/cp_link.rs:703:9
+    |
+703 |     let rng = &mut OsRng;
+    |         ^^^ help: if this is intentional, prefix it with an underscore: `_rng`
+
+warning: unused variable: `thetas`
+   --> src/bin/cp_link.rs:705:22
+    |
+705 |     let (params, HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup::<P>(col_size as u32, witness_size, l, params);
+    |                      ^^^^^^ help: if this is intentional, prefix it with an underscore: `_thetas`
+
+warning: unused variable: `z_v`
+   --> src/bin/cp_link.rs:705:34
+    |
+705 |     let (params, HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup::<P>(col_size as u32, witness_size, l, params);
+    |                                  ^^^ help: if this is intentional, prefix it with an underscore: `_z_v`
+
+warning: unused variable: `z_last`
+   --> src/bin/cp_link.rs:705:39
+    |
+705 |     let (params, HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup::<P>(col_size as u32, witness_size, l, params);
+    |                                       ^^^^^^ help: if this is intentional, prefix it with an underscore: `_z_last`
+
+warning: unused variable: `zhats`
+   --> src/bin/cp_link.rs:705:47
+    |
+705 |     let (params, HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup::<P>(col_size as u32, witness_size, l, params);
+    |                                               ^^^^^ help: if this is intentional, prefix it with an underscore: `_zhats`
+
+warning: unused variable: `zhat_coms`
+   --> src/bin/cp_link.rs:705:62
+    |
+705 |     let (params, HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup::<P>(col_size as u32, witness_size, l, params);
+    |                                                              ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_zhat_coms`
+
+warning: unused variable: `prover_timer`
+   --> src/bin/cp_link.rs:708:9
+    |
+708 |     let prover_timer = Instant::now();
+    |         ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_prover_timer`
+
+warning: unused variable: `poly_timer`
+   --> src/bin/cp_link.rs:709:9
+    |
+709 |     let poly_timer = Instant::now();
+    |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_poly_timer`
+
+warning: unused variable: `poly_coms`
+   --> src/bin/cp_link.rs:775:5
+    |
+775 |     poly_coms: Vec<Scheme::Curve>,
+    |     ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_poly_coms`
+
+warning: function `fast_product` is never used
+   --> src/bin/cp_link.rs:135:4
+    |
+135 | fn fast_product<F: WithSmallOrderMulGroup<3>>(polys: &[Polynomial<F, Coeff>]) -> Polynomial<F, Coeff> {
+    |    ^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `setup_pp` is never used
+   --> src/bin/cp_link.rs:173:4
+    |
+173 | fn setup_pp<P: Engine<Scalar: WithSmallOrderMulGroup<3>>, R: Rng + Clone>(rng: &mut R, t: usize) -> CS2_PP<P> {
+    |    ^^^^^^^^
+
+warning: function `interpolate` is never used
+   --> src/bin/cp_link.rs:199:4
+    |
+199 | fn interpolate<F: WithSmallOrderMulGroup<3>> (vals: Vec<F>, domain: EvaluationDomain<F>) -> Polynomial<F, Coeff> {
+    |    ^^^^^^^^^^^
+
+warning: function `keygen1` is never used
+   --> src/bin/cp_link.rs:203:4
+    |
+203 | fn keygen1<E: Engine<Scalar: WithSmallOrderMulGroup<3>>>(t: u32) -> CS2_PP<E> {
+    |    ^^^^^^^
+
+warning: function `keygen2` is never used
+   --> src/bin/cp_link.rs:208:4
+    |
+208 | fn keygen2<E: Engine<Scalar: WithSmallOrderMulGroup<3>>>(t: u32) -> CS2_PP<E> {
+    |    ^^^^^^^
+
+warning: function `cplink1` is never used
+   --> src/bin/cp_link.rs:281:4
+    |
+281 | fn cplink1<E: Engine<Scalar: WithSmallOrderMulGroup<3> + Ord, G1Affine: SerdeCurveAffine, G2Affine: SerdeCurveAffine> + Debug>(
+    |    ^^^^^^^
+
+warning: function `cplink2` is never used
+   --> src/bin/cp_link.rs:505:4
+    |
+505 | fn cplink2<E: Engine<Scalar: WithSmallOrderMulGroup<3> + Ord + FromUniformBytes<64>, G1Affine: SerdeCurveAffine, G2Affine: SerdeCur...
+    |    ^^^^^^^
+
+warning: function `verify1` is never used
+   --> src/bin/cp_link.rs:631:4
+    |
+631 | fn verify1<P: Engine + Debug> (
+    |    ^^^^^^^
+
+warning: function `cplink` is never used
+   --> src/bin/cp_link.rs:674:4
+    |
+674 | fn cplink (witness_size: usize, col_size: usize, l: usize, params: ParamsKZG<Bn256>) {
+    |    ^^^^^^
+
+warning: function `verify` is never used
+   --> src/bin/cp_link.rs:729:4
+    |
+729 | fn verify<
+    |    ^^^^^^
+
+warning: function `create_proof` is never used
+   --> src/bin/cp_link.rs:766:4
+    |
+766 | fn create_proof<
+    |    ^^^^^^^^^^^^
+
+warning: variable `HH` should have a snake case name
+   --> src/bin/cp_link.rs:232:9
+    |
+232 |     let HH = EvaluationDomain::<E::Scalar>::new(1, col_size);
+    |         ^^ help: convert the identifier to snake case: `hh`
+    |
+    = note: `#[warn(non_snake_case)]` (part of `#[warn(nonstandard_style)]`) on by default
+
+warning: variable `HH_vals` should have a snake case name
+   --> src/bin/cp_link.rs:239:9
+    |
+239 |     let HH_vals = powers(HH.get_omega()).take(n as usize).collect::<Vec<_>>();
+    |         ^^^^^^^ help: convert the identifier to snake case: `hh_vals`
+
+warning: variable `HH` should have a snake case name
+   --> src/bin/cp_link.rs:289:5
+    |
+289 |     HH: EvaluationDomain<E::Scalar>,
+    |     ^^ help: convert the identifier to snake case: `hh`
+
+warning: variable `HH_vals` should have a snake case name
+   --> src/bin/cp_link.rs:303:9
+    |
+303 |     let HH_vals: Vec<E::Scalar> = powers(HH.get_omega()).take(10).collect();
+    |         ^^^^^^^ help: convert the identifier to snake case: `hh_vals`
+
+warning: variable `HH` should have a snake case name
+   --> src/bin/cp_link.rs:396:5
+    |
+396 |     HH: EvaluationDomain<E::Scalar>,
+    |     ^^ help: convert the identifier to snake case: `hh`
+
+warning: variable `HH_vals` should have a snake case name
+   --> src/bin/cp_link.rs:411:9
+    |
+411 |     let HH_vals: Vec<E::Scalar> = powers(HH.get_omega()).take(10).collect();
+    |         ^^^^^^^ help: convert the identifier to snake case: `hh_vals`
+
+warning: variable `HH` should have a snake case name
+   --> src/bin/cp_link.rs:507:5
+    |
+507 |     HH: EvaluationDomain<E::Scalar>, 
+    |     ^^ help: convert the identifier to snake case: `hh`
+
+warning: variable `HH` should have a snake case name
+   --> src/bin/cp_link.rs:679:18
+    |
+679 |     let (params, HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup::<P>(col_size as u32, witness_size, l, params);
+    |                  ^^ help: convert the identifier to snake case: `hh`
+
+warning: variable `HH` should have a snake case name
+   --> src/bin/cp_link.rs:705:18
+    |
+705 |     let (params, HH, thetas, zs, z_v, z_last, zhats, z_coms, zhat_coms) = setup::<P>(col_size as u32, witness_size, l, params);
+    |                  ^^ help: convert the identifier to snake case: `hh`
+
+warning: `zkml` (bin "params") generated 2 warnings (run `cargo fix --bin "params" -p zkml` to apply 2 suggestions)
+warning: `zkml` (bin "load_circuit") generated 7 warnings (run `cargo fix --bin "load_circuit" -p zkml` to apply 7 suggestions)
+warning: `zkml` (bin "cp_link") generated 66 warnings (run `cargo fix --bin "cp_link" -p zkml` to apply 45 suggestions)
+warning: `zkml` (bin "estimate_cost") generated 2 warnings (run `cargo fix --bin "estimate_cost" -p zkml` to apply 1 suggestion)
+warning: `zkml` (bin "verify_wav") generated 3 warnings
+warning: `zkml` (bin "test_circuit") generated 3 warnings (run `cargo fix --bin "test_circuit" -p zkml` to apply 3 suggestions)
+warning: `zkml` (bin "draw_circuit") generated 6 warnings (run `cargo fix --bin "draw_circuit" -p zkml` to apply 6 suggestions)
+warning: `zkml` (bin "verify_circuit") generated 1 warning (run `cargo fix --bin "verify_circuit" -p zkml` to apply 1 suggestion)
+warning: `zkml` (bin "time_circuit") generated 1 warning (run `cargo fix --bin "time_circuit" -p zkml` to apply 1 suggestion)
+warning: unused dependency `criterion`
+  --> Cargo.toml:40:1
+   |
+40 | criterion = "0.5.1"
+   | ^^^^^^^^^
+   |
+   = note: `cargo::unused_dependencies` is set to `warn` by default
+help: consider removing the dependency on `criterion`
+warning: unused dependency `halo2`
+  --> Cargo.toml:18:1
+   |
+18 | halo2 = { path = "halo2/halo2"}
+   | ^^^^^
+   |
+help: consider removing the dependency on `halo2`
+warning: `zkml` (manifest) generated 2 warnings
+    Finished `release` profile [optimized] target(s) in 2m 00s
+BUILD_OK Sun Nov  1 11:41:26 PM EST 2026
+time_left_s=2878 before mnist nocom-kzg
+=== mnist nocom-kzg timeout=600 args: examples/mnist/model.msgpack examples/mnist/inp.msgpack kzg false 0 15 10 false false 1 . false false false ===
+mnist nocom-kzg exit 101
+!Tensors: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21]
+!commit_before: Some([])
+Path: ./params_kzg_Bn256/15.params
+
+thread 'main' (184551) panicked at src/utils/proving_kzg.rs:35:47:
+Failed to create params file: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+time_left_s=2875 before kzg k=16
+=== micro kzg k=16 passes=2 timeout=180 ===
+micro kzg k=16 exit 0
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+kzg,1,16,65536,setup,5.902525,0.009549,0.086133,0.190591,0.000082,0.276724,39576,64
+kzg,2,16,65536,setup,5.902525,0.009549,0.082936,0.177247,0.000080,0.260183,39584,64
+time_left_s=2868 before kzg k=18
+=== micro kzg k=18 passes=2 timeout=180 ===
+micro kzg k=18 exit 0
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+kzg,1,18,262144,setup,22.908437,0.038192,0.289798,0.621394,0.000090,0.911192,144860,64
+kzg,2,18,262144,setup,22.908437,0.038192,0.275887,0.597452,0.000088,0.873340,144864,64
+time_left_s=2843 before kzg k=20
+=== micro kzg k=20 passes=2 timeout=240 ===
+micro kzg k=20 exit 0
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+kzg,1,20,1048576,setup,91.649900,0.152500,1.018694,2.246926,0.000098,3.265620,559632,64
+kzg,2,20,1048576,setup,91.649900,0.152500,0.981734,2.246784,0.000092,3.228518,559632,64
+time_left_s=2742 before kzg k=22
+=== micro kzg k=22 passes=2 timeout=300 ===
+micro kzg k=22 exit 124
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+time_left_s=2442 before ipa k=16
+=== micro ipa k=16 passes=2 timeout=180 ===
+micro ipa k=16 exit 0
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+ipa,1,16,65536,setup,8.212985,0.007339,0.069284,1.378894,0.004614,1.448178,31524,1184
+ipa,2,16,65536,setup,8.212985,0.007339,0.073569,1.348609,0.001626,1.422178,31524,1184
+time_left_s=2431 before ipa k=18
+=== micro ipa k=18 passes=2 timeout=240 ===
+micro ipa k=18 exit 0
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+ipa,1,18,262144,setup,36.169629,0.029529,0.236526,5.196353,0.010060,5.432878,126224,1312
+ipa,2,18,262144,setup,36.169629,0.029529,0.241382,5.313538,0.004382,5.554920,126224,1312
+time_left_s=2383 before ipa k=20
+=== micro ipa k=20 passes=2 timeout=300 ===
+micro ipa k=20 exit 0
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+ipa,1,20,1048576,setup,158.777099,0.117547,0.831537,20.064048,0.016866,20.895585,430044,1440
+ipa,2,20,1048576,setup,158.777099,0.117547,0.822458,20.159601,0.016635,20.982059,461808,1440
+time_left_s=2181 before mnist poly-kzg
+=== mnist poly-kzg timeout=600 args: examples/mnist/model.msgpack examples/mnist/inp.msgpack kzg true 3 15 10 false false 1 . false false false ===
+mnist poly-kzg exit 0
+Zero: AssignedCell { value: Value { inner: None }, cell: Cell { region_index: RegionIndex(0), row_offset: 0, column: Column { index: 0, column_type: Fixed } }, _marker: PhantomData<halo2curves::bn256::fr::Fr> }
+RHO Circ: [AssignedCell { value: Value { inner: Some(0x1232d0c21bcddcf74af47dafc464a8a8ddc39ef15396b0f4c6271d4bb138d6ea) }, cell: Cell { region_index: RegionIndex(3), row_offset: 2508, column: Column { index: 3, column_type: Advice { phase: Phase(1) } } }, _marker: PhantomData<halo2curves::bn256::fr::Fr> }]
+Synthesis time: 24.605689ms
+Time elapsed in filling circuit: 37.994µs
+Assigned column: Column { index: 0, column_type: Advice }
+Assigned column: Column { index: 1, column_type: Advice }
+Assigned column: Column { index: 2, column_type: Advice }
+Betas: ([Product(Product(Constant(0x0000000000000000000000000000000000000000000000000000000000000001), Challenge(Challenge { index: 0, phase: Phase(0) })), Challenge(Challenge { index: 0, phase: Phase(0) })), Product(Constant(0x0000000000000000000000000000000000000000000000000000000000000001), Challenge(Challenge { index: 0, phase: Phase(0) })), Constant(0x0000000000000000000000000000000000000000000000000000000000000001)], 3)
+commit_before: []
+Phases: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Columns advice: {0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}
+Number of values: 7526
+Cell IDX: 7526
+Number of values: 7526
+Cell IDX: 7526
+Zero: AssignedCell { value: Value { inner: None }, cell: Cell { region_index: RegionIndex(0), row_offset: 0, column: Column { index: 0, column_type: Fixed } }, _marker: PhantomData<halo2curves::bn256::fr::Fr> }
+final_out_idxes: [37]
+Synthesis time: 103.077516ms
+Columns advice: {3}
+Number of values: 7526
+Cell IDX: 7526
+Number of values: 7526
+Cell IDX: 7526
+Zero: AssignedCell { value: Value { inner: None }, cell: Cell { region_index: RegionIndex(0), row_offset: 0, column: Column { index: 0, column_type: Fixed } }, _marker: PhantomData<halo2curves::bn256::fr::Fr> }
+RHO Circ: [AssignedCell { value: Value { inner: Some(0x0cccc5207215b4809e37eea95d8a83091a0328b0dfc4bdc291d858a477b10461) }, cell: Cell { region_index: RegionIndex(3), row_offset: 2508, column: Column { index: 3, column_type: Advice { phase: Phase(1) } } }, _marker: PhantomData<halo2curves::bn256::fr::Fr> }]
+Synthesis time: 47.147888ms
+Proving time: 5.445391504s
+Proof size: 5472
+(Rho, Beta): (0x0cccc5207215b4809e37eea95d8a83091a0328b0dfc4bdc291d858a477b10461, 0x2cfaaf60195d2f0c945775a413916b52bd1e39cea9f2b3ebde244f465d284bbd), row_idx: 2508, col_idx: 3
+public vals len: 1
+Tensor len: 7526
+KZG proof time: 326.399137ms
+Tensor len: 7526
+KZG proof time: 405.979944ms
+Proving time: 6.177808676s
+KZG vfy time: 138.878µs
+KZG vfy time: 132.365µs
+Min: 0 / Max: 0 rotation, instance len: 1
+Verifying time: [12.936631ms]
+CSV file created successfully.
+time_left_s=2156 before kzg k=24
+=== micro kzg k=24 passes=2 timeout=420 ===
+micro kzg k=24 exit 124
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+time_left_s=1736 before ipa k=22
+=== micro ipa k=22 passes=2 timeout=360 ===
+micro ipa k=22 exit 124
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+time_left_s=1376 before mnist cplink-kzg
+=== mnist cplink-kzg timeout=600 args: examples/mnist/model.msgpack examples/mnist/inp.msgpack kzg false 0 15 10 true false 1 . true false false ===
+mnist cplink-kzg exit 0
+CPLINK1: Prover time: 3.313925571s
+CPLINK1: Verifier time: 11.945112ms
+U size: 32768, Poly size 32768
+Uhats: 1.448815087s
+Large q: 1.669903403s
+CPrimetime: 26.601096ms
+Rest time: 101.164554ms
+CPLINK1: Prover time: 3.24649948s
+CPLINK1: Verifier time: 11.965576ms
+U size: 32768, Poly size 32768
+Uhats: 1.507449825s
+Large q: 1.444920235s
+CPrimetime: 27.450007ms
+Rest time: 138.853317ms
+CPLINK1: Prover time: 3.118692057s
+CPLINK1: Verifier time: 15.214337ms
+U size: 32768, Poly size 32768
+Uhats: 1.811538477s
+Large q: 1.675494684s
+CPrimetime: 24.767994ms
+Rest time: 97.930137ms
+CPLINK1: Prover time: 3.609740985s
+CPLINK1: Verifier time: 11.930261ms
+U size: 32768, Poly size 32768
+Uhats: 1.522188386s
+Large q: 1.715549635s
+CPrimetime: 28.737054ms
+Rest time: 106.851482ms
+CPLINK1: Prover time: 3.373337673s
+CPLINK1: Verifier time: 12.010475ms
+U size: 32768, Poly size 32768
+Uhats: 1.495684366s
+Large q: 1.555334858s
+CPrimetime: 26.281453ms
+Rest time: 138.964454ms
+CPLINK1: Prover time: 3.216275235s
+CPLINK1: Verifier time: 14.858216ms
+Min: 0 / Max: 0 rotation, instance len: 0
+Verifying time: [133.226637ms]
+CSV file created successfully.
+time_left_s=1328 profile k=20
+=== perf stat kzg k=20 (cached params, 1 pass) ===
+perf stat exit 255
+=== perf record kzg k=20 ===
+perf record exit 255
+=== nvidia-smi at end ===
+Mon Nov  2 00:07:18 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    Off |   00000000:E3:00.0 Off |                    0 |
+| N/A   26C    P8             34W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+DONE Mon Nov  2 12:07:19 AM EST 2026
+total 31K
+drwxr-x--- 2 USER USER 4.0K Nov  2 00:07 .
+drwxr-xr-x 2 USER USER 4.0K Nov  1 23:57 ..
+-rw-r----- 1 USER USER  298 Nov  1 23:48 ipa-k16.csv
+-rw-r----- 1 USER USER  277 Nov  1 23:48 ipa-k16.log
+-rw-r----- 1 USER USER  304 Nov  1 23:49 ipa-k18.csv
+-rw-r----- 1 USER USER  282 Nov  1 23:49 ipa-k18.log
+-rw-r----- 1 USER USER  312 Nov  1 23:53 ipa-k20.csv
+-rw-r----- 1 USER USER  286 Nov  1 23:53 ipa-k20.log
+-rw-r----- 1 USER USER  126 Nov  2 00:00 ipa-k22.csv
+-rw-r----- 1 USER USER   73 Nov  2 00:00 ipa-k22.log
+-rw-r----- 1 USER USER  294 Nov  1 23:41 kzg-k16.csv
+-rw-r----- 1 USER USER  274 Nov  1 23:41 kzg-k16.log
+-rw-r----- 1 USER USER  300 Nov  1 23:42 kzg-k18.csv
+-rw-r----- 1 USER USER  279 Nov  1 23:42 kzg-k18.log
+-rw-r----- 1 USER USER  302 Nov  1 23:43 kzg-k20.csv
+-rw-r----- 1 USER USER  280 Nov  1 23:43 kzg-k20.log
+-rw-r----- 1 USER USER    0 Nov  2 00:07 kzg-k20-perfpass.csv
+-rw-r----- 1 USER USER  861 Nov  2 00:07 kzg-k20-perfpass.log
+-rw-r----- 1 USER USER    0 Nov  2 00:07 kzg-k20-perrecord.csv
+-rw-r----- 1 USER USER  861 Nov  2 00:07 kzg-k20-perrecord.log
+-rw-r----- 1 USER USER  126 Nov  1 23:43 kzg-k22.csv
+-rw-r----- 1 USER USER   70 Nov  1 23:43 kzg-k22.log
+-rw-r----- 1 USER USER  126 Nov  1 23:53 kzg-k24.csv
+-rw-r----- 1 USER USER   71 Nov  1 23:53 kzg-k24.log
+-rw-r----- 1 USER USER   72 Nov  2 00:07 mnist-cplink-kzg.csv
+-rw-r----- 1 USER USER 6.9K Nov  2 00:07 mnist-cplink-kzg.log
+-rw-r----- 1 USER USER   70 Nov  1 23:41 mnist-nocom-kzg.csv
+-rw-r----- 1 USER USER  390 Nov  1 23:41 mnist-nocom-kzg.log
+-rw-r----- 1 USER USER   69 Nov  1 23:53 mnist-poly-kzg.csv
+-rw-r----- 1 USER USER 9.9K Nov  1 23:53 mnist-poly-kzg.log
+-rw------- 1 USER USER    0 Nov  2 00:07 perf-kzg-k20.data
+-rw-r----- 1 USER USER   64 Nov  2 00:07 perf-report-kzg-k20.txt
+-rw-r----- 1 USER USER   39 Nov  2 00:07 perf-stat-kzg-k20.txt

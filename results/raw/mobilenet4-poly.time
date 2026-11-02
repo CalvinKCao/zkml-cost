@@ -1,0 +1,24 @@
+Command exited with non-zero status 124
+	Command being timed: "timeout --signal=TERM 3300 /scratch/USER/artemis/target/release/time_circuit /scratch/USER/artemis/examples/v2_1.0_224_truncated/model.msgpack /scratch/USER/artemis/examples/train_graph/input.msgpack kzg true 1 23 20 false false 1 . false false false"
+	User time (seconds): 30592.23
+	System time (seconds): 966.62
+	Percent of CPU this job got: 953%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 55:08.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 168673840
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 83
+	Minor (reclaiming a frame) page faults: 538722615
+	Voluntary context switches: 335851
+	Involuntary context switches: 511099
+	Swaps: 0
+	File system inputs: 2117176
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 124

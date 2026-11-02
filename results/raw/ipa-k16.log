@@ -1,0 +1,6 @@
+rayon threads 16 hwm_kib_start 3388
+ipa pasta-Eq k=16 n=65536 passes=2
+params setup 8.213s hwm_kib=29528
+pass 1: commit 0.069s open 1.379s verify 0.005s hwm_kib 31524
+pass 2: commit 0.074s open 1.349s verify 0.002s hwm_kib 31524
+cached params /tmp/artemis-params/ipa-16.params

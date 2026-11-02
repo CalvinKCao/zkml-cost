@@ -1,0 +1,3 @@
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+kzg,1,24,16777216,setup,1513.978490,2.463929,13.514198,31.000979,0.000115,44.515177,8915768,64
+kzg,2,24,16777216,setup,1513.978490,2.463929,13.231499,30.971229,0.000104,44.202728,8915768,64

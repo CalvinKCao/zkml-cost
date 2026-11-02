@@ -1,0 +1,6 @@
+rayon threads 16 hwm_kib_start 3288
+kzg Bn256 k=16 n=65536 passes=2
+params setup 5.903s hwm_kib=37688
+pass 1: commit 0.086s open 0.191s verify 0.000s hwm_kib 39576
+pass 2: commit 0.083s open 0.177s verify 0.000s hwm_kib 39584
+cached params /tmp/artemis-params/kzg-16.params

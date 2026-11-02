@@ -1,0 +1,44 @@
+job 7132415 node kn021 Mon Nov  2 12:07:50 AM EST 2026
+GPU 0: NVIDIA L40S (UUID: GPU-cc123852-3ebc-f33d-c2a0-02c739adcc90)
+=== mnist nocom-kzg ===
+mnist nocom exit 0
+Proving time: 4.799088834s
+Proof size: 4800
+Verifying time: [6.357618ms]
+time_left_s=2993 before kzg k=24
+micro kzg k=24 exit 0
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+kzg,1,24,16777216,setup,1513.978490,2.463929,13.514198,31.000979,0.000115,44.515177,8915768,64
+kzg,2,24,16777216,setup,1513.978490,2.463929,13.231499,30.971229,0.000104,44.202728,8915768,64
+time_left_s=1350 before kzg k=22
+micro kzg k=22 exit 0
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+kzg,1,22,4194304,setup,366.657003,0.616052,3.621612,8.244343,0.000109,11.865955,2230816,64
+kzg,2,22,4194304,setup,366.657003,0.616052,3.555204,8.229978,0.000104,11.785182,2230816,64
+time_left_s=950 before ipa 22
+time_left_s=950 before ipa k=22
+micro ipa k=22 exit 124
+scheme,pass,k,n,params_source,setup_or_load_s,poly_gen_s,commit_s,open_s,verify_s,commit_plus_open_s,peak_rss_kib,proof_bytes
+ipa,1,22,4194304,setup,700.118903,0.468824,3.008225,78.930960,0.071687,81.939185,1715660,1568
+=== nvidia-smi at end ===
+Mon Nov  2 00:55:21 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    Off |   00000000:17:00.0 Off |                    0 |
+| N/A   28C    P8             34W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+DONE Mon Nov  2 12:55:21 AM EST 2026

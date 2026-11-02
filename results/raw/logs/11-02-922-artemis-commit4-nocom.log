@@ -1,0 +1,6 @@
+mobilenet nocom exit 0
+Proving time: 2879.516342051s
+Verifying time: [13.862875ms]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 54:42.63
+	Maximum resident set size (kbytes): 162730352
+DONE
