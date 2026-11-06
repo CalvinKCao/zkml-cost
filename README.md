@@ -6,7 +6,7 @@ I tried to answer this with the authors' public Artemis code (halo2 with KZG or 
 
 ## Artemis allows low cost commitment checks
 
-Short answer, yes at MobileNet scale and only roughly on MNIST. On the truncated MobileNet, committing to and opening the weights plus the linking opening took 33 s of a 2981 s proof, about 1.1 percent. The same proof without commitments took 2880 s and 3041 s in two runs, so the difference sits inside the run-to-run noise. On MNIST the Artemis-style proof took 1.27x to 1.29x the no-commitment time, above the paper's 1.01x to 1.15x, and I do not know why. The weight commit and linking were about 13 percent of that run.
+Short answer, yes at MobileNet scale and only roughly on MNIST. On the truncated MobileNet, committing to and opening the weights plus the linking opening took 33 s of a 2981 s proof, about 1.1 percent. The same proof without commitments took 2880 s and 3041 s in two runs, so the difference sits inside the run-to-run noise. On MNIST the Artemis-style proof took 1.27x to 1.29x the no-commitment time, above the paper's 1.01x to 1.15x, and I do not know why. The weight commit and linking were about 13 percent of the run.
 
 ![share of prover time, normalised to the baseline](results/plots/e2e_breakdown.png)
 
@@ -16,7 +16,7 @@ Not tested. The repo is built on halo2, which is not a sum-check prover, so my r
 
 ## zkLLM proves 13 billion parameter models
 
-Not tested either. I did not run zkLLM, and my largest vector had 67 million entries, about 200 times fewer than 13 billion. I do not know what commitment costs at that size.
+Not tested either. I did not run zkLLM, and my largest vector had 67 million entries, about 200 times fewer than 13 billion. I do not know what commitment costs at 13 billion.
 
 ## Opening proofs need an MSM linear in the input
 
