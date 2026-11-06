@@ -2,7 +2,7 @@
 
 # Does Artemis stay cheap as models grow?
 
-Zero-knowledge ML lets a company return a prediction together with a short proof that a specific model produced it. Building the proof is expensive, and the proof also has to tie to a public fingerprint of the model's weights (a commitment), so the person checking it knows which model ran. Artemis is a recent method for making this tie cheap, and its paper reports only 1.01x to 1.15x extra prover time. I wanted to see whether the cost stays small as models get bigger and the rest of the proof gets faster. I ran the authors' public code on one 16-thread CPU node, using the two bundled models that come with weights, an 8.1K-parameter MNIST network and a truncated MobileNet.
+Zero-knowledge ML lets a company return a prediction together with a short proof of which model produced it. Building the proof is expensive, and the proof also has to tie to a public fingerprint of the model's weights (a commitment), so the person checking it knows which model ran. Artemis is a recent method for making this tie cheap, and its paper reports only 1.01x to 1.15x extra prover time. I wanted to see whether the cost stays small as models get bigger and the rest of the proof gets faster. I ran the authors' public code on one 16-thread CPU node, using the two bundled models that come with weights, an 8.1K-parameter MNIST network and a truncated MobileNet.
 
 ## Committing to a long vector
 
@@ -12,7 +12,7 @@ Committing to the weights means summing one elliptic-curve operation per weight 
 
 ## Inside full proofs
 
-I split each Artemis-style run into the main proof, a linking opening that ties the proof to the committed weights, and the weight commit and open. On MNIST the last two took about 13 percent of the 5.4 s run. On the truncated MobileNet they took 33 s of 2981 s, about 1.1 percent. Without commitments the MobileNet proof took 2880 s and 3041 s in two runs, so the Artemis-style run falls inside the noise between them. A sampling profiler I wrote myself (perf is blocked on the cluster) puts 37 percent of MobileNet's CPU time in MSMs and 41 percent in FFTs, with and without Artemis.
+I split each Artemis-style run into the main proof, a linking opening, which ties the proof to the committed weights, and the weight commit and open. On MNIST the last two took about 13 percent of the 5.4 s run. On the truncated MobileNet they took 33 s of 2981 s, about 1.1 percent. Without commitments the MobileNet proof took 2880 s and 3041 s in two runs, so the Artemis-style run falls inside the noise between them. A sampling profiler I wrote myself (perf is blocked on the cluster) puts 37 percent of MobileNet's CPU time in MSMs and 41 percent in FFTs, with and without Artemis.
 
 ![share of prover time, normalised to the baseline](results/plots/e2e_breakdown.png)
 
