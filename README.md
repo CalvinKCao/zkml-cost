@@ -2,7 +2,7 @@
 
 # Does Artemis stay cheap as models grow?
 
-Zero-knowledge ML lets a company return a prediction together with a short proof of which model produced it. Building the proof is expensive, and the proof also has to tie to a public fingerprint of the model's weights (a commitment), so the person checking it knows which model ran. Artemis is a recent method for making this tie cheap, and its paper reports only 1.01x to 1.15x extra prover time. I wanted to see whether the cost stays small as models get bigger and the rest of the proof gets faster. I ran the authors' public code on one 16-thread CPU node, using the two bundled models that come with weights, an 8.1K-parameter MNIST network and a truncated MobileNet.
+Zero-knowledge ML lets a company return a prediction together with a short proof of which model produced it. Building the proof is expensive, and the proof also has to tie to a public fingerprint of the model's weights (a commitment), so the person checking it knows which model ran. Artemis is a recent method for making this tie cheap, and its paper reports only 1.01x to 1.15x extra prover time. I wanted to see whether the cost stays small as models get bigger and the rest of the proof gets faster. I ran the authors' public code on one 16-thread CPU node, using the two bundled models with weights, an 8.1K-parameter MNIST network and a truncated MobileNet.
 
 ## Committing to a long vector
 
