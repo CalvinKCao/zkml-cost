@@ -1,6 +1,10 @@
-model,params,config,status,prover_s,peak_rss_gib,note
-mnist,8.1K,no commitment,ok,4.799,,single run
-mnist,8.1K,artemis-style (poly_com=true poly_cols=3),ok,6.178,,"single run; 5.445 s halo2 proof + 0.326 + 0.406 s external weight openings"
-mnist,8.1K,lunar-style cp_link,ok,37.959,,single run
-mobilenet-truncated,1.58MB model file,no commitment,ok,2879.5,155.2,k=23 cols=20; 16 vCPU
-mobilenet-truncated,1.58MB model file,artemis-style (poly_com=true poly_cols=1),not finished,,160.9,killed at 55 min wall (about 47 min into proving); not finished
+model,run,config,total_prover_s,halo2_proof_s,weight_commit_open_s,linking_open_s,weight_commit_open_share,linking_open_share,peak_rss_gib,source
+mnist,1,no commitment,4.799,4.799,0,0,0,0,,mnist-nocom-kzg
+mnist,1,artemis-style,6.178,5.445,0.326,0.406,0.0528,0.0657,,mnist-poly-kzg
+mnist,1,cp_link,37.959,4.334,0,0,0,0,,mnist-cplink-kzg
+mnist,2,no commitment,4.25,4.25,0,0,0,0,,mnist3-nocom
+mnist,2,artemis-style,5.399,4.676,0.329,0.394,0.0609,0.0731,,mnist3-poly
+mnist,2,cp_link,34.434,4.15,0,0,0,0,,mnist3-cplink
+mobilenet-truncated,1,no commitment,2879.516,2879.516,0,0,0,0,155.2,mobilenet4-nocom
+mobilenet-truncated,2,no commitment,3041.471,3041.471,0,0,0,0,155.8,mobilenet5-nocom
+mobilenet-truncated,1,artemis-style,2981.482,2948.447,15.696,17.338,0.0053,0.0058,160.7,mobilenet5-poly

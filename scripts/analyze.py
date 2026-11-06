@@ -13,13 +13,15 @@ raw = root / "results" / "raw"
 plots = root / "results" / "plots"
 plots.mkdir(exist_ok=True)
 
+SKIP = ("perfpass", "perrecord", "-prof", "-warm", "loadonly")
 frames = [pd.read_csv(f) for f in sorted(glob.glob(str(raw / "*-k*.csv")))
-          if Path(f).name.split("-")[0] in ("kzg", "ipa") and "pass" not in f and "per" not in f]
+          if Path(f).name.split("-")[0] in ("kzg", "ipa") and not any(t in f for t in SKIP)]
 df = pd.concat(frames, ignore_index=True)
 df["peak_gib"] = df.peak_rss_kib / 2**20
+df["setup_only"] = df.setup_or_load_s.where(df.params_source == "setup")
 agg = (df.groupby(["scheme", "k", "n"])
          .agg(commit_s=("commit_s", "median"), open_s=("open_s", "median"),
-              verify_s=("verify_s", "median"), setup_s=("setup_or_load_s", "first"),
+              verify_s=("verify_s", "median"), setup_s=("setup_only", "max"),
               peak_gib=("peak_gib", "max"), passes=("pass", "count"))
          .reset_index())
 agg["commit_open_s"] = agg.commit_s + agg.open_s

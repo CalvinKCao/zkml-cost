@@ -1,0 +1,81 @@
+== mnist-nocom (6665 samples, 67 cpu-s) 
+ 51.24%  <halo2curves::bn256::fq::Fq>::mul
+ 17.18%  <halo2curves::bn256::fr::Fr>::mul
+  6.20%  <&halo2curves::bn256::curve::G1 as core::ops::arith::Add<&halo2curves::bn256::curve::G1Affine>>::add
+  5.21%  <&halo2curves::bn256::curve::G1 as core::ops::arith::Add>::add
+  3.03%  halo2_proofs::fft::parallel::serial_fft::<halo2curves::bn256::fr::Fr, halo2curves::bn256::fr::Fr>
+  2.16%  halo2_proofs::arithmetic::multiexp_serial::<halo2curves::bn256::curve::G1Affine>
+  1.59%  halo2_proofs::fft::parallel::split_radix_fft::<halo2curves::bn256::fr::Fr, halo2curves::bn256::fr::Fr>
+  1.50%  ?
+== mnist-poly (10412 samples, 104 cpu-s) 
+ 54.23%  <halo2curves::bn256::fq::Fq>::mul
+ 12.10%  <halo2curves::bn256::fr::Fr>::mul
+  4.36%  <&halo2curves::bn256::curve::G1 as core::ops::arith::Add<&halo2curves::bn256::curve::G1Affine>>::add
+  4.23%  <&halo2curves::bn256::curve::G1 as core::ops::arith::Add>::add
+  3.22%  <halo2curves::bn256::fq2::Fq2>::square_assign
+  3.00%  <halo2curves::bn256::fq2::Fq2>::mul_assign
+  2.87%  <halo2curves::bn256::fq::Fq>::square
+  2.31%  halo2_proofs::fft::parallel::serial_fft::<halo2curves::bn256::fr::Fr, halo2curves::bn256::fr::Fr>
+== mnist-cplink (46608 samples, 466 cpu-s) 
+ 28.16%  <halo2curves::bn256::fr::Fr>::mul
+ 17.95%  <halo2curves::bn256::fq::Fq>::mul
+ 11.16%  <halo2curves::bn256::fr::Fr>::square
+  8.45%  ?
+  6.66%  crossbeam_epoch::default::with_handle::<crossbeam_epoch::default::pin::{closure#0}, crossbeam_epoch::guard::Guard>
+  5.99%  halo2_proofs::fft::parallel::serial_fft::<halo2curves::bn256::fr::Fr, halo2curves::bn256::fr::Fr>
+  3.07%  <crossbeam_deque::deque::Stealer<rayon_core::job::JobRef>>::steal
+  2.91%  halo2_proofs::fft::parallel::split_radix_fft::<halo2curves::bn256::fr::Fr, halo2curves::bn256::fr::Fr>
+== kzg-k20 (14901 samples, 298 cpu-s) includes parameter loading
+ 63.90%  <halo2curves::bn256::fq::Fq>::mul
+  7.11%  <halo2curves::bn256::fq2::Fq2>::square_assign
+  6.96%  <halo2curves::bn256::fq2::Fq2>::mul_assign
+  6.85%  <halo2curves::bn256::fq::Fq>::square
+  4.42%  <&halo2curves::bn256::curve::G1 as core::ops::arith::Add<&halo2curves::bn256::curve::G1Affine>>::add
+  3.55%  <halo2curves::bn256::fq2::Fq2 as ff::Field>::pow::<[u64; 4]>
+  3.37%  <halo2curves::bn256::fq::Fq as ff::Field>::sqrt
+  1.25%  halo2_proofs::arithmetic::multiexp_serial::<halo2curves::bn256::curve::G1Affine>
+== kzg-k22 (57589 samples, 1152 cpu-s) includes parameter loading
+ 62.88%  <halo2curves::bn256::fq::Fq>::mul
+  7.27%  <halo2curves::bn256::fq2::Fq2>::square_assign
+  7.19%  <halo2curves::bn256::fq::Fq>::square
+  7.08%  <halo2curves::bn256::fq2::Fq2>::mul_assign
+  4.66%  <&halo2curves::bn256::curve::G1 as core::ops::arith::Add<&halo2curves::bn256::curve::G1Affine>>::add
+  3.84%  <halo2curves::bn256::fq2::Fq2 as ff::Field>::pow::<[u64; 4]>
+  3.62%  <halo2curves::bn256::fq::Fq as ff::Field>::sqrt
+  1.45%  halo2_proofs::arithmetic::multiexp_serial::<halo2curves::bn256::curve::G1Affine>
+== ipa-k18 (7199 samples, 144 cpu-s) 
+ 54.88%  <&pasta_curves::curves::Eq as core::ops::arith::Add<&pasta_curves::curves::EqAffine>>::add
+ 26.35%  <pasta_curves::curves::Eq as group::Group>::double
+  5.03%  <&pasta_curves::curves::Eq as core::ops::arith::Add>::add
+  4.25%  subtle::black_box::<u8>
+  2.63%  <core::ops::range::Range<u32> as core::iter::traits::iterator::Iterator>::fold::<pasta_curves::fields::fq::Fq, <pasta_curves::fields::fq::Fq
+  1.83%  <&pasta_curves::curves::EqAffine as core::ops::arith::Mul<&pasta_curves::fields::fp::Fp>>::mul
+  1.43%  ?
+  1.21%  halo2_proofs::arithmetic::multiexp_serial::<pasta_curves::curves::EqAffine>
+== ipa-k20 (27656 samples, 553 cpu-s) 
+ 54.76%  <&pasta_curves::curves::Eq as core::ops::arith::Add<&pasta_curves::curves::EqAffine>>::add
+ 27.62%  <pasta_curves::curves::Eq as group::Group>::double
+  4.04%  subtle::black_box::<u8>
+  3.71%  <&pasta_curves::curves::Eq as core::ops::arith::Add>::add
+  2.68%  <core::ops::range::Range<u32> as core::iter::traits::iterator::Iterator>::fold::<pasta_curves::fields::fq::Fq, <pasta_curves::fields::fq::Fq
+  2.10%  <&pasta_curves::curves::EqAffine as core::ops::arith::Mul<&pasta_curves::fields::fp::Fp>>::mul
+  1.48%  ?
+  1.11%  halo2_proofs::arithmetic::multiexp_serial::<pasta_curves::curves::EqAffine>
+== mobilenet-nocom (157721 samples, 31544 cpu-s) 
+ 36.13%  <halo2curves::bn256::fr::Fr>::mul
+ 29.40%  <halo2curves::bn256::fq::Fq>::mul
+  8.87%  halo2_proofs::fft::parallel::serial_fft::<halo2curves::bn256::fr::Fr, halo2curves::bn256::fr::Fr>
+  5.75%  <&halo2curves::bn256::curve::G1 as core::ops::arith::Add<&halo2curves::bn256::curve::G1Affine>>::add
+  3.50%  ?
+  2.41%  halo2_proofs::arithmetic::multiexp_serial::<halo2curves::bn256::curve::G1Affine>
+  2.30%  halo2_proofs::fft::parallel::split_radix_fft::<halo2curves::bn256::fr::Fr, halo2curves::bn256::fr::Fr>
+  1.25%  <halo2_proofs::plonk::evaluation::GraphEvaluator<halo2curves::bn256::curve::G1Affine>>::evaluate::<halo2_proofs::poly::LagrangeCoeff>
+== mobilenet-poly (162414 samples, 32483 cpu-s) 
+ 35.76%  <halo2curves::bn256::fr::Fr>::mul
+ 29.58%  <halo2curves::bn256::fq::Fq>::mul
+  8.67%  halo2_proofs::fft::parallel::serial_fft::<halo2curves::bn256::fr::Fr, halo2curves::bn256::fr::Fr>
+  5.72%  <&halo2curves::bn256::curve::G1 as core::ops::arith::Add<&halo2curves::bn256::curve::G1Affine>>::add
+  3.50%  ?
+  3.04%  halo2_proofs::arithmetic::multiexp_serial::<halo2curves::bn256::curve::G1Affine>
+  2.28%  halo2_proofs::fft::parallel::split_radix_fft::<halo2curves::bn256::fr::Fr, halo2curves::bn256::fr::Fr>
+  1.23%  <halo2_proofs::plonk::evaluation::GraphEvaluator<halo2curves::bn256::curve::G1Affine>>::evaluate::<halo2_proofs::poly::LagrangeCoeff>

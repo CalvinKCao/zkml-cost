@@ -1,0 +1,9 @@
+mobilenet poly exit 0
+Proving time: 2948.447382533s
+KZG proof time: 15.696322655s
+KZG proof time: 17.338283008s
+Proving time: 2981.482027102s
+Verifying time: [26.811201ms]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 57:18.95
+	Maximum resident set size (kbytes): 168497304
+DONE

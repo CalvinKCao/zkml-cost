@@ -1,0 +1,6 @@
+rayon threads 16 hwm_kib_start 3364
+kzg Bn256 k=22 n=4194304 passes=2
+params setup 366.517s hwm_kib=2231096
+pass 1: commit 3.590s open 8.147s verify 0.000s hwm_kib 2231096
+pass 2: commit 3.516s open 8.156s verify 0.000s hwm_kib 2231096
+cached params /tmp/params/kzg-22.params

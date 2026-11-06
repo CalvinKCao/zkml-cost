@@ -1,0 +1,10 @@
+profile,samples,cpu_seconds,msm_pct,fft_pct,ipa_collapse_pct,other_pct,main_thread_pct,note
+mnist-nocom,6665,66.7,60.2,20.1,0.0,19.7,1.9,
+mnist-poly,10412,104.1,47.0,13.7,0.0,39.2,1.6,
+mnist-cplink,46608,466.1,23.7,51.8,0.0,24.4,2.5,
+kzg-k20,14901,298.0,29.8,0.0,0.0,70.2,0.5,includes parameter loading
+kzg-k22,57589,1151.8,27.3,0.0,0.0,72.7,0.5,includes parameter loading
+ipa-k18,7199,144.0,25.8,0.0,69.1,5.1,1.6,
+ipa-k20,27656,553.1,22.5,0.0,71.9,5.6,1.7,
+mobilenet-nocom,157721,31544.2,36.7,41.3,0.0,22.0,4.2,
+mobilenet-poly,162414,32482.8,37.6,40.8,0.0,21.6,4.2,

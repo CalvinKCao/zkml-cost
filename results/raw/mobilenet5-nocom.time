@@ -1,0 +1,23 @@
+	Command being timed: "timeout --signal=TERM 10200 env LD_PRELOAD=/scratch/USER/artemis/profiler/libsampler.so PROF_OUT=/scratch/USER/artemis/bench-out/prof-mobilenet-nocom.bin PROF_HZ=5 /scratch/USER/artemis/./target/release/time_circuit /scratch/USER/artemis/examples/v2_1.0_224_truncated/model.msgpack /scratch/USER/artemis/examples/train_graph/input.msgpack kzg false 0 23 20 false false 1 . false false false"
+	User time (seconds): 30472.51
+	System time (seconds): 1073.60
+	Percent of CPU this job got: 911%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 57:40.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 163362436
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 85
+	Minor (reclaiming a frame) page faults: 567513990
+	Voluntary context switches: 244889
+	Involuntary context switches: 678126
+	Swaps: 0
+	File system inputs: 2118624
+	File system outputs: 71576
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

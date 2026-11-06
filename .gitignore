@@ -1,3 +1,5 @@
 __pycache__/
 *.data
 *.pdf
+*.so
+results/raw/prof-*.bin

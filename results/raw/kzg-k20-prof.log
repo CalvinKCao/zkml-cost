@@ -1,0 +1,5 @@
+rayon threads 16 hwm_kib_start 3556
+kzg Bn256 k=20 n=1048576 passes=2
+params load 13.433s hwm_kib=552556
+pass 1: commit 1.035s open 2.242s verify 0.000s hwm_kib 552556
+pass 2: commit 0.981s open 2.239s verify 0.000s hwm_kib 552556

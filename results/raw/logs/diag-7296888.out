@@ -1,0 +1,18 @@
+host=kn135 submit_dir=/scratch/USER/artemis tmpdir=/tmp job=7296888 name=diag_poly
+-rwxr-xr-x 1 USER USER 2440 Nov  2 11:25 /scratch/USER/artemis/slurm/common.sh
+10.0.7.1:/scratch  3.0P  869T  2.1P  29% /scratch
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_vx=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/cvmfs/soft.computecanada.ca/custom/software/lmod/lmod/init/bash)
+Shell debugging restarted
++ unset __lmod_vx
++ source /scratch/USER/artemis/slurm/common.sh
+++ set -uo pipefail
+++ cd /scratch/USER/artemis
+++ mkdir -p results/logs bench-out params_kzg_Bn256 params_kzg_Bls12 params_ipa
+++ exec
++++ date +%m-%d
+[2026-11-05T16:04:51.015] error: *** JOB 7296888 ON kn135 CANCELLED AT 2026-11-05T16:04:51 DUE TO TIME LIMIT ***

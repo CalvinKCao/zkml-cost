@@ -1,0 +1,12 @@
+mnist nocom exit 0
+mnist poly exit 0
+mnist cplink exit 0
+micro kzg 20 exit 0
+profiled kzg 20 exit 0
+micro ipa 18 exit 0
+profiled ipa 18 exit 0
+micro kzg 22 exit 0
+profiled kzg 22 exit 0
+micro ipa 20 exit 0
+profiled ipa 20 exit 0
+DONE

@@ -1,0 +1,6 @@
+rayon threads 16 hwm_kib_start 3264
+ipa pasta-Eq k=22 n=4194304 passes=2
+params setup 708.918s hwm_kib=1706716
+pass 1: commit 4.133s open 85.068s verify 0.069s hwm_kib 1717104
+pass 2: commit 4.225s open 81.620s verify 0.064s hwm_kib 1787052
+cached params /tmp/params/ipa-22.params

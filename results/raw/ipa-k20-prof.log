@@ -1,0 +1,5 @@
+rayon threads 16 hwm_kib_start 3576
+ipa pasta-Eq k=20 n=1048576 passes=2
+params load 1.533s hwm_kib=282080
+pass 1: commit 0.854s open 20.126s verify 0.017s hwm_kib 433700
+pass 2: commit 0.822s open 20.132s verify 0.027s hwm_kib 455352

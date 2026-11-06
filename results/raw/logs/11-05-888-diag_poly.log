@@ -1,0 +1,22 @@
+++ export RUSTUP_HOME=/scratch/USER/artemis-toolchain/rustup
+++ RUSTUP_HOME=/scratch/USER/artemis-toolchain/rustup
+++ export CARGO_HOME=/scratch/USER/artemis-toolchain/cargo
+++ CARGO_HOME=/scratch/USER/artemis-toolchain/cargo
+++ export PATH=/scratch/USER/artemis-toolchain/cargo/bin:/cm/shared/apps/slurm/current/sbin:/cm/shared/apps/slurm/current/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Core/mii/1.1.2/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Core/flexiblascore/3.3.1/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucc/1.2.0/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/pmix/4.2.4/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/libfabric/1.18.0/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/hwloc/2.9.1/sbin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/hwloc/2.9.1/bin:/cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/x86_64-pc-linux-gnu/gcc-bin/12:/cvmfs/soft.computecanada.ca/easybuild/bin:/cvmfs/soft.computecanada.ca/custom/bin:/cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/bin:/cvmfs/soft.computecanada.ca/custom/bin/computecanada:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.5.3/bin
+++ PATH=/scratch/USER/artemis-toolchain/cargo/bin:/cm/shared/apps/slurm/current/sbin:/cm/shared/apps/slurm/current/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Core/mii/1.1.2/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Core/flexiblascore/3.3.1/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcc12/openmpi/4.1.5/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucc/1.2.0/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/pmix/4.2.4/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/libfabric/1.18.0/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/ucx/1.14.1/bin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/hwloc/2.9.1/sbin:/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/hwloc/2.9.1/bin:/cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/x86_64-pc-linux-gnu/gcc-bin/12:/cvmfs/soft.computecanada.ca/easybuild/bin:/cvmfs/soft.computecanada.ca/custom/bin:/cvmfs/soft.computecanada.ca/gentoo/2023/x86-64-v3/usr/bin:/cvmfs/soft.computecanada.ca/custom/bin/computecanada:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.5.3/bin
+++ export RAYON_NUM_THREADS=16
+++ RAYON_NUM_THREADS=16
+++ SAMPLER=/scratch/USER/artemis/profiler/libsampler.so
+++ BENCH=./target/release/commit_microbench
+++ CIRCUIT=./target/release/time_circuit
+++ PARAMS=/tmp/params
+++ mkdir -p /tmp/params
++ mobilenet poly 10200 kzg true 1 23 20 false false 1 . false false false
++ tag=poly
++ limit=10200
++ shift 2
++ work=/tmp/run-poly
++ mkdir -p /tmp/run-poly/results /tmp/run-poly/params_kzg_Bls12 /tmp/run-poly/params_ipa
++ ln -sfn /scratch/USER/artemis/params_kzg_Bn256 /tmp/run-poly/params_kzg_Bn256
++ cd /tmp/run-poly
++ /usr/bin/time -v timeout --signal=TERM 10200 env LD_PRELOAD=/scratch/USER/artemis/profiler/libsampler.so PROF_OUT=/scratch/USER/artemis/bench-out/prof-mobilenet-poly.bin PROF_HZ=5 /scratch/USER/artemis/./target/release/time_circuit /scratch/USER/artemis/examples/v2_1.0_224_truncated/model.msgpack /scratch/USER/artemis/examples/train_graph/input.msgpack kzg true 1 23 20 false false 1 . false false false
