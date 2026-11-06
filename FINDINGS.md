@@ -1,10 +1,8 @@
+*Disclosure: I wrote general outline of this short writeup and had Claude create the first draft. ~60% of the final text below is my own.*
+
 # Artemis commitment cost at larger sizes
 
-I wanted to know whether the commitment step in Artemis stays cheap as models grow, or whether it becomes the bottleneck again once the rest of the proof gets faster. I ran the public Artemis code (pps-lab/artemis, commit 69dff50) on one Killarney node with 16 CPU threads. The node also has an L40S GPU, but the MSM code in this repo only runs on the CPU, so the GPU sat idle. Every number below comes from my own runs, and the raw logs are in results/raw.
-
-## What I reproduced against the paper
-
-The repo only ships weights and inputs for one small model, the 8.1K parameter MNIST network, so MNIST is the only model I was able to compare with the paper. The paper reports a prover overhead between 1.01x and 1.15x for Artemis with KZG. I measured 1.29x in my first run (4.80 s without commitments, 6.18 s with Artemis) and 1.27x in a second run (4.25 s and 5.40 s). Both are above the paper's range. The verifier is also slower, at 12.9 ms against 6.4 ms in the first run, where the paper lists 8 ms against 7 ms. I used 16 threads where the paper used a 32 vCPU AWS machine, and I took the Artemis settings (poly_cols=3, 15 rows, 10 columns) from the repo's test.zsh. I do not know whether the gap comes from the hardware, from my settings, or from something else. The Lunar-style CP-link baseline took 37.96 s and 34.43 s in the two runs, about eight times the time without commitments.
+I wanted to know whether the commitment step in Artemis stays cheap as models grow, or whether it becomes the bottleneck again once the rest of the proof gets faster. I ran the public Artemis code with a 16-CPU node for one small model, the 8.1K parameter MNIST network. The paper reports a prover overhead between 1.01x and 1.15x for Artemis with KZG. I measured 1.29x in my first run (4.80 s without commitments, 6.18 s with Artemis) and 1.27x in a second run (4.25 s and 5.40 s). Both are above the paper's range. The verifier is also slower, at 12.9 ms against 6.4 ms in the first run, where the paper lists 8 ms against 7 ms. I used 16 threads where the paper used a 32 vCPU AWS machine, and I took the Artemis settings (poly_cols=3, 15 rows, 10 columns) from the repo's test.zsh. I do not know whether the gap comes from the hardware, from my settings, or from something else. The Lunar-style CP-link baseline took 37.96 s and 34.43 s in the two runs, about eight times the time without commitments.
 
 ## The main scaling result
 

@@ -1,6 +1,6 @@
 # Annotated walkthrough of the Artemis commitment-cost writeup
 
-Plain text is the writeup exactly as it appears in README.md. Everything inside a quote block is an annotation added for readers with an ML background who have not read the Artemis paper and have not worked with cryptography or systems code. The annotations explain terms, say why each measurement was taken, and point out what to look for in each chart. Where I describe how the Artemis code works, I am going from my own reading of its source and of the paper's evaluation section, and I say so when I am less sure.
+Plain text is the writeup exactly as it appears in FINDINGS.md. Everything inside a quote block is an annotation added for readers with an ML background who have not read the Artemis paper and have not worked with cryptography or systems code. The annotations explain terms, say why each measurement was taken, and point out what to look for in each chart. Where I describe how the Artemis code works, I am going from my own reading of its source and of the paper's evaluation section, and I say so when I am less sure.
 
 > **Primer: the setting in six paragraphs**
 >
